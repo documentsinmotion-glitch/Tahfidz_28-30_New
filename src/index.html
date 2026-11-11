@@ -1,0 +1,2129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#064E3B">
+<meta name="color-scheme" content="light dark">
+<script>
+  /* terapkan tema sebelum halaman digambar (hindari kedipan): pilihan tersimpan, jika tidak ada ikuti sistem */
+  (function(){
+    var v=null; try{ v=localStorage.getItem('tahfidz-theme'); }catch(e){}
+    var dark = v==='dark' || (v!=='light' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+    var h=document.documentElement; if(dark) h.classList.add('dark');
+    var m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute('content', dark?'#03140E':'#064E3B');
+  })();
+</script>
+<title>Tahfidz 28-30 — Kuis Al-Qur'an Juz 28, 29 &amp; 30</title>
+
+
+<link rel="stylesheet" href="assets/css/app.css">
+<script src="assets/js/native-bridge.js"></script>
+<script defer src="assets/js/alpine.min.js"></script>
+<script src="assets/js/lucide.min.js"></script>
+
+<style>
+  [x-cloak]{display:none!important}
+  html{scroll-behavior:smooth}
+  body{
+    background-color:#F8FAFC;
+    background-image:
+      radial-gradient(1200px 500px at 50% -120px, rgba(16,185,129,.18), transparent 70%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%23064E3B' stroke-opacity='.05' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M26 26H62V62H26ZM44 18.54L69.46 44L44 69.46L18.54 44Z'/%3E%3Ccircle cx='44' cy='44' r='5'/%3E%3Cpath d='M-18 -18H18V18H-18ZM0 -25.46L25.46 0L0 25.46L-25.46 0Z'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3Cpath d='M-18 70H18V106H-18ZM0 62.54L25.46 88L0 113.46L-25.46 88Z'/%3E%3Ccircle cx='0' cy='88' r='5'/%3E%3Cpath d='M70 -18H106V18H70ZM88 -25.46L113.46 0L88 25.46L62.54 0Z'/%3E%3Ccircle cx='88' cy='0' r='5'/%3E%3Cpath d='M70 70H106V106H70ZM88 62.54L113.46 88L88 113.46L62.54 88Z'/%3E%3Ccircle cx='88' cy='88' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-tap-highlight-color:transparent;
+  }
+  .font-arab{font-feature-settings:"liga","calt","kern";}
+  .glass{background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .gold-text{background:linear-gradient(120deg,#B8932A,#F59E0B 45%,#D4AF37);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero{background:linear-gradient(135deg,#022C22 0%,#064E3B 55%,#047857 100%)}
+  .hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='1' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M19 19H45V45H19ZM32 13.62L50.38 32L32 50.38L13.62 32Z'/%3E%3Ccircle cx='32' cy='32' r='3.5'/%3E%3Cpath d='M-13 -13H13V13H-13ZM0 -18.38L18.38 0L0 18.38L-18.38 0Z'/%3E%3Ccircle cx='0' cy='0' r='3.5'/%3E%3Cpath d='M-13 51H13V77H-13ZM0 45.62L18.38 64L0 82.38L-18.38 64Z'/%3E%3Ccircle cx='0' cy='64' r='3.5'/%3E%3Cpath d='M51 -13H77V13H51ZM64 -18.38L82.38 0L64 18.38L45.62 0Z'/%3E%3Ccircle cx='64' cy='0' r='3.5'/%3E%3Cpath d='M51 51H77V77H51ZM64 45.62L82.38 64L64 82.38L45.62 64Z'/%3E%3Ccircle cx='64' cy='64' r='3.5'/%3E%3C/g%3E%3C/svg%3E")}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+  @keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+  @keyframes ring{0%{transform:scale(1);opacity:.55}100%{transform:scale(2);opacity:0}}
+  @keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,.55),0 10px 30px rgba(239,68,68,.35)}50%{box-shadow:0 0 0 14px rgba(239,68,68,0),0 10px 40px rgba(239,68,68,.55)}}
+  @keyframes wave{0%,100%{height:20%}50%{height:100%}}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .anim-fade-up{animation:fadeUp .45s cubic-bezier(.2,.8,.2,1) both}
+  .animate-shake{animation:shake .45s}
+  .anim-pop{animation:pop .45s cubic-bezier(.2,.9,.3,1.2) both}
+  .anim-float{animation:floaty 4s ease-in-out infinite}
+  .mic-ring{position:absolute;inset:0;border-radius:9999px;background:rgba(239,68,68,.35);animation:ring 1.6s ease-out infinite}
+  .mic-live{animation:glow 1.6s ease-in-out infinite}
+  .wave-bar{display:block;width:3px;border-radius:3px;height:25%;background:currentColor;opacity:.55}
+  .wave-on .wave-bar{animation:wave .9s ease-in-out infinite;opacity:1}
+  .spinner{width:38px;height:38px;border-radius:9999px;border:4px solid #A7F3D0;border-top-color:#059669;animation:spin .8s linear infinite}
+  .ring-prog{transition:stroke-dashoffset .35s ease}
+  .scroll-thin::-webkit-scrollbar{width:6px}.scroll-thin::-webkit-scrollbar-thumb{background:#A7F3D0;border-radius:6px}
+  button{touch-action:manipulation}
+
+  /* ---------- animasi halaman (wizard) ---------- */
+  @keyframes slideR{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+  @keyframes slideL{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+  .anim-slide-r{animation:slideR .38s cubic-bezier(.2,.8,.2,1) both}
+  .anim-slide-l{animation:slideL .38s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(221,185,63,.55)}100%{box-shadow:0 0 0 12px rgba(221,185,63,0)}}
+  .step-now{animation:pulseRing 1.8s ease-out infinite}
+  .ornament{background:linear-gradient(90deg,transparent,rgba(184,147,42,.55),transparent);height:1px}
+
+  /* ---------- MODE GELAP ---------- */
+  html.theme-anim body,html.theme-anim .glass,html.theme-anim [class*="bg-"],html.theme-anim [class*="border-"],html.theme-anim [class*="text-"]{
+    transition:background-color .35s ease,border-color .35s ease,color .35s ease!important}
+  html.dark{color-scheme:dark}
+  html.dark body{background-color:#06110C;color:#E3EEE8;
+    background-image:radial-gradient(1200px 500px at 50% -120px, rgba(16,185,129,.15), transparent 70%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='none' stroke='%2334D399' stroke-opacity='.07' stroke-width='1' stroke-linejoin='round'%3E%3Cpath d='M26 26H62V62H26ZM44 18.54L69.46 44L44 69.46L18.54 44Z'/%3E%3Ccircle cx='44' cy='44' r='5'/%3E%3Cpath d='M-18 -18H18V18H-18ZM0 -25.46L25.46 0L0 25.46L-25.46 0Z'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3Cpath d='M-18 70H18V106H-18ZM0 62.54L25.46 88L0 113.46L-25.46 88Z'/%3E%3Ccircle cx='0' cy='88' r='5'/%3E%3Cpath d='M70 -18H106V18H70ZM88 -25.46L113.46 0L88 25.46L62.54 0Z'/%3E%3Ccircle cx='88' cy='0' r='5'/%3E%3Cpath d='M70 70H106V106H70ZM88 62.54L113.46 88L88 113.46L62.54 88Z'/%3E%3Ccircle cx='88' cy='88' r='5'/%3E%3C/g%3E%3C/svg%3E")}
+  html.dark .hero{background:linear-gradient(135deg,#01110B 0%,#033225 55%,#055B43 100%)}
+  html.dark .glass{background:rgba(14,31,23,.84)}
+  html.dark .border-white{border-color:rgba(255,255,255,.07)}
+  html.dark .bg-white:not(.kw){background-color:#102319}
+  html.dark .bg-white\/80{background-color:rgba(16,35,25,.8)}
+  html.dark .bg-slate-100{background-color:#0A1812}
+  html.dark .bg-slate-200{background-color:#1D3328}
+  html.dark .bg-slate-300{background-color:#3A5246}
+  html.dark .bg-slate-400{background-color:#566E62}
+  html.dark .bg-emerald-50{background-color:rgba(16,185,129,.12)}
+  html.dark .bg-emerald-50\/95{background-color:rgba(8,26,18,.96)}
+  html.dark .bg-emerald-100{background-color:rgba(16,185,129,.2)}
+  html.dark .bg-rose-50{background-color:rgba(244,63,94,.12)}
+  html.dark .bg-rose-100{background-color:rgba(244,63,94,.2)}
+  html.dark .bg-amber-50{background-color:rgba(245,158,11,.1)}
+  html.dark .bg-amber-100{background-color:rgba(245,158,11,.18)}
+  html.dark .hover\:bg-slate-50:hover{background-color:#16301F}
+  html.dark .hover\:bg-emerald-50:hover,html.dark .hover\:bg-emerald-50\/70:hover{background-color:rgba(16,185,129,.14)}
+  html.dark .hover\:bg-emerald-100:hover{background-color:rgba(16,185,129,.24)}
+  html.dark .hover\:bg-rose-100:hover{background-color:rgba(244,63,94,.26)}
+  html.dark .hover\:bg-amber-100:hover{background-color:rgba(245,158,11,.24)}
+  html.dark .text-slate-800{color:#E3EEE8}
+  html.dark .text-slate-700{color:#CBDAD2}
+  html.dark .text-slate-600{color:#B3C6BC}
+  html.dark .text-slate-500{color:#93A99E}
+  html.dark .text-slate-400{color:#6F877B}
+  html.dark .text-slate-300{color:#4B6256}
+  html.dark .text-emerald-950:not(.on-gold){color:#E8F7F0}
+  html.dark .text-emerald-900{color:#D3F2E4}
+  html.dark .text-emerald-800{color:#A7EBCB}
+  html.dark .text-emerald-700{color:#6FDDB0}
+  html.dark .text-emerald-600{color:#34D399}
+  html.dark .text-gold-600{color:#E2BE48}
+  html.dark .text-gold-700{color:#D4AF37}
+  html.dark .text-rose-700{color:#FDA4AF}
+  html.dark .text-rose-600{color:#FB7185}
+  html.dark .text-rose-500{color:#FB7185}
+  html.dark .text-amber-800{color:#FCD34D}
+  html.dark .text-amber-700{color:#FBBF24}
+  html.dark .text-amber-600{color:#FBBF24}
+  html.dark .hover\:text-emerald-800:hover,html.dark .hover\:text-emerald-700:hover{color:#6FDDB0}
+  html.dark .hover\:text-rose-600:hover{color:#FB7185}
+  html.dark .border-slate-100,html.dark .divide-slate-100>:not([hidden])~:not([hidden]){border-color:#1A2F25}
+  html.dark .border-slate-200{border-color:#213A2F}
+  html.dark .border-slate-300{border-color:#2F4B3E}
+  html.dark .border-emerald-100,html.dark .border-emerald-100\/70{border-color:#1E4033}
+  html.dark .border-emerald-200{border-color:#27594A}
+  html.dark .hover\:border-emerald-300:hover{border-color:#2E8C6B}
+  html.dark .hover\:border-emerald-400:hover{border-color:#34D399}
+  html.dark .border-rose-100{border-color:rgba(244,63,94,.25)}
+  html.dark .border-rose-200{border-color:rgba(244,63,94,.35)}
+  html.dark .border-rose-300{border-color:rgba(244,63,94,.5)}
+  html.dark .border-amber-100,html.dark .border-amber-200{border-color:rgba(245,158,11,.3)}
+  html.dark .border-amber-300{border-color:rgba(245,158,11,.55)}
+  html.dark .ring-emerald-200{--tw-ring-color:rgba(16,185,129,.35)}
+  html.dark .ring-rose-200{--tw-ring-color:rgba(244,63,94,.35)}
+  html.dark input,html.dark textarea{color:#E3EEE8}
+  html.dark input::placeholder{color:#6F877B}
+  html.dark .spinner{border-color:rgba(167,243,208,.2);border-top-color:#34D399}
+  html.dark .scroll-thin::-webkit-scrollbar-thumb{background:#2F5A47}
+  html.dark circle[stroke="#fff"]{stroke:#1B3328}
+  html.dark circle[stroke="#D1FAE5"]{stroke:#17382B}
+  html.dark .hero .text-emerald-900,html.dark .hero .text-emerald-950{color:#064E3B}
+  html.dark .kw .text-emerald-800{color:#065F46}
+  html.dark .text-emerald-900\/80{color:rgba(211,242,228,.8)}
+  html.dark .ornament{background:linear-gradient(90deg,transparent,rgba(226,190,72,.5),transparent)}
+
+  /* ---------- khusus aplikasi Android (Capacitor) ---------- */
+  html.is-native{--sat:max(env(safe-area-inset-top,0px),var(--safe-area-inset-top,0px));--sab:max(env(safe-area-inset-bottom,0px),var(--safe-area-inset-bottom,0px))}
+  html.is-native body{overscroll-behavior-y:none;-webkit-user-select:none;user-select:none}
+  html.is-native input{-webkit-user-select:text;user-select:text}
+  html.is-native header.hero{padding-top:var(--sat,0px)}
+  html.is-native header.hero>.absolute.top-4{top:calc(1rem + var(--sat,0px))}
+  html.is-native .sticky.top-0.z-30{padding-top:var(--sat,0px)}
+  html.is-native .fixed.top-4{top:calc(1rem + var(--sat,0px))}
+  html.is-native .sticky.bottom-3{bottom:calc(.75rem + var(--sab,0px))}
+  html.is-native #app{padding-bottom:calc(2.5rem + var(--sab,0px))}
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+
+<body class="font-sans text-slate-800 min-h-screen antialiased">
+<div id="app" x-data="tahfiz()" x-init="init()" x-cloak class="min-h-screen pb-10">
+
+  <!-- Toast -->
+  <div class="fixed top-4 inset-x-0 z-50 flex justify-center pointer-events-none px-4">
+    <div x-show="toast" x-transition.opacity.duration.250ms
+         class="pointer-events-auto glass border border-emerald-100 shadow-lg rounded-full px-5 py-2.5 text-sm font-medium text-emerald-900 flex items-center gap-2">
+      <i data-lucide="circle-alert" class="w-4 h-4 text-gold-600"></i><span x-text="toast"></span>
+    </div>
+  </div>
+
+  <!-- Notifikasi tengah layar: benar / salah / peringatan -->
+  <div class="fixed inset-0 z-[60] flex items-center justify-center pointer-events-none px-6"
+       x-show="flash.show" x-transition.opacity.duration.200ms role="status" aria-live="assertive">
+    <div class="bg-white rounded-3xl shadow-2xl border-2 px-8 py-7 text-center w-full max-w-xs anim-pop"
+         :class="flash.kind==='ok' ? 'border-emerald-400' : (flash.kind==='bad' ? 'border-rose-400' : 'border-amber-300')">
+      <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-3 text-white"
+           :class="flash.kind==='ok' ? 'bg-emerald-500' : (flash.kind==='bad' ? 'bg-rose-500' : 'bg-amber-500')">
+        <span x-show="flash.kind==='ok'"><i data-lucide="check" class="w-9 h-9"></i></span>
+        <span x-show="flash.kind==='bad'"><i data-lucide="x" class="w-9 h-9"></i></span>
+        <span x-show="flash.kind==='warn'"><i data-lucide="mic-off" class="w-8 h-8"></i></span>
+      </div>
+      <div class="text-2xl font-extrabold" :class="flash.kind==='ok' ? 'text-emerald-700' : (flash.kind==='bad' ? 'text-rose-600' : 'text-amber-600')" x-text="flash.title"></div>
+      <div class="text-sm text-slate-500 mt-1" x-text="flash.sub"></div>
+    </div>
+  </div>
+
+  <!-- ============================ HOME (wizard 4 langkah) ============================ -->
+  <section x-show="screen==='home'" x-transition:enter="transition ease-out duration-400" x-transition:enter-start="opacity-0 translate-y-3" x-transition:enter-end="opacity-100 translate-y-0">
+    <header class="hero relative overflow-hidden text-white">
+      <!-- Saklar mode gelap (halaman Utama) -->
+      <div x-show="step===1" class="absolute top-4 right-4 z-20 flex items-center gap-2">
+        <span class="hidden sm:inline text-[11px] font-bold tracking-wide text-emerald-100/80" x-text="dark ? 'Mode Gelap' : 'Mode Terang'"></span>
+        <button type="button" id="dark-switch" role="switch" :aria-checked="dark" aria-label="Mode gelap" :title="dark ? 'Beralih ke mode terang' : 'Beralih ke mode gelap'" @click="toggleDark()"
+                class="relative w-[4.5rem] h-9 rounded-full border border-white/25 backdrop-blur transition-colors duration-300 overflow-hidden"
+                :class="dark ? 'bg-emerald-950/70' : 'bg-white/15'">
+          <span class="absolute inset-y-0 left-2 flex items-center text-gold-300 transition-opacity duration-300" :class="dark ? 'opacity-70' : 'opacity-0'"><i data-lucide="sun" class="w-4 h-4"></i></span>
+          <span class="absolute inset-y-0 right-2 flex items-center text-emerald-100 transition-opacity duration-300" :class="dark ? 'opacity-0' : 'opacity-70'"><i data-lucide="moon" class="w-4 h-4"></i></span>
+          <span class="kw absolute top-1 left-1 w-7 h-7 rounded-full bg-white shadow-lg flex items-center justify-center transition-transform duration-300 ease-out" :class="dark ? 'translate-x-9' : ''">
+            <span x-show="!dark" class="text-amber-500 flex"><i data-lucide="sun" class="w-4 h-4"></i></span>
+            <span x-show="dark" class="text-emerald-800 flex"><i data-lucide="moon" class="w-4 h-4"></i></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="relative z-10 max-w-2xl mx-auto px-5 text-center transition-all duration-300" :class="step===1 ? 'pt-12 pb-20' : 'pt-7 pb-16'">
+        <div x-show="step===1" class="anim-float inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/10 border border-white/20 mb-5 shadow-xl">
+          <i data-lucide="moon-star" class="w-8 h-8 text-gold-400"></i>
+        </div>
+        <h1 class="font-extrabold tracking-tight transition-all" :class="step===1 ? 'text-4xl sm:text-5xl' : 'text-2xl sm:text-3xl'">Tahfidz <span class="gold-text">28-30</span></h1>
+        <p x-show="step===1" class="font-arab text-3xl mt-3 text-gold-300" dir="rtl">حِفْظُ الجُزْءِ ٢٨ – ٣٠</p>
+        <p x-show="step===1" class="mt-3 text-emerald-100/90 text-sm sm:text-base max-w-md mx-auto">Kuis interaktif untuk menguatkan hafalan Juz 28, 29 &amp; 30</p>
+
+        <!-- Penunjuk langkah -->
+        <nav aria-label="Langkah pengaturan" class="mt-6 max-w-sm mx-auto">
+          <ol class="flex items-start">
+            <template x-for="s in steps" :key="s.n">
+              <li class="relative flex-1 flex flex-col items-center" :aria-current="step===s.n ? 'step' : null">
+                <span x-show="s.n>1" class="absolute top-[17px] right-1/2 w-full h-0.5 bg-white/20 z-0">
+                  <span class="block h-full bg-gold-400 transition-all duration-500" :style="'width:'+(step>=s.n ? 100 : 0)+'%'"></span>
+                </span>
+                <button type="button" :id="'stp-'+s.n" @click="goStep(s.n)" :disabled="s.n>maxStep" :aria-label="'Langkah '+s.n+': '+s.t"
+                  class="kw relative z-10 w-9 h-9 rounded-full border-2 flex items-center justify-center text-sm font-extrabold transition-all duration-300 disabled:cursor-default"
+                  :class="step===s.n ? 'bg-white text-emerald-900 border-gold-400 step-now' : (step>s.n ? 'bg-gold-400 text-emerald-950 border-gold-400' : (s.n<=maxStep ? 'bg-white/10 text-white border-white/50 hover:bg-white/20' : 'bg-white/5 text-white/40 border-white/20'))">
+                  <svg x-show="step>s.n" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                  <span x-show="step<=s.n" x-text="s.n"></span>
+                </button>
+                <span class="mt-1.5 text-[10px] sm:text-[11px] font-bold tracking-wide transition-colors" :class="step===s.n ? 'text-gold-300' : (s.n<=maxStep ? 'text-white/80' : 'text-white/40')" x-text="s.t"></span>
+              </li>
+            </template>
+          </ol>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 -mt-12 relative z-20 space-y-5">
+
+      <!-- LANGKAH 1: Jenis kuis -->
+      <div x-show="step===1" :class="stepAnim" id="step-1">
+      <!-- Mode -->
+      <div class="glass rounded-3xl shadow-xl shadow-emerald-900/5 border border-white p-5 sm:p-6">
+        <h2 class="flex items-center gap-2 font-bold text-emerald-900 mb-4"><i data-lucide="list-checks" class="w-5 h-5 text-gold-600"></i> Pilihan Jenis Kuis</h2>
+        <div class="grid gap-3">
+          <template x-for="m in modes" :key="m.id">
+            <button type="button" @click="cfg.mode=m.id"
+              class="text-left rounded-2xl border-2 p-4 flex items-start gap-4 transition-all duration-200"
+              :class="cfg.mode===m.id ? 'border-emerald-500 bg-emerald-50 shadow-md' : 'border-slate-200 bg-white hover:border-emerald-300'">
+              <span class="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center transition-colors"
+                    :class="cfg.mode===m.id ? 'bg-emerald-900 text-gold-400' : 'bg-slate-100 text-slate-500'">
+                <i :data-lucide="m.icon" class="w-5 h-5"></i>
+              </span>
+              <span class="flex-1 min-w-0">
+                <span class="flex items-center gap-2 flex-wrap">
+                  <span class="font-bold text-emerald-950" x-text="'Mode '+m.no+': '+m.title"></span>
+                  <span x-show="(m.id==='voice' || m.id==='surahvoice') && !speechSupported" class="text-[10px] font-semibold uppercase tracking-wide bg-amber-100 text-amber-700 rounded-full px-2 py-0.5">Mic tidak didukung</span>
+                </span>
+                <span class="block text-sm text-slate-500 mt-0.5" x-text="m.desc"></span>
+              </span>
+              <span class="shrink-0 mt-1 w-5 h-5 rounded-full border-2 flex items-center justify-center"
+                    :class="cfg.mode===m.id ? 'border-emerald-600 bg-emerald-600' : 'border-slate-300'">
+                <span class="kw w-2 h-2 rounded-full bg-white" x-show="cfg.mode===m.id"></span>
+              </span>
+            </button>
+          </template>
+        </div>
+      </div>
+      </div>
+
+      <!-- LANGKAH 2: Pilihan Juz -->
+      <div x-show="step===2" :class="stepAnim" id="step-2" class="space-y-5">
+      <!-- Juz -->
+      <div class="glass rounded-3xl shadow-xl shadow-emerald-900/5 border border-white p-5 sm:p-6">
+        <h2 class="flex items-center gap-2 font-bold text-emerald-900 mb-4"><i data-lucide="book-open" class="w-5 h-5 text-gold-600"></i> Pilihan Juz</h2>
+        <div class="grid grid-cols-2 gap-3">
+          <template x-for="j in juzOptions" :key="j.id">
+            <button type="button" @click="cfg.juz=j.id"
+              class="rounded-2xl border-2 px-4 py-3 text-left transition-all duration-200"
+              :class="[cfg.juz===j.id ? 'border-emerald-500 bg-emerald-50 shadow-md' : 'border-slate-200 bg-white hover:border-emerald-300', j.id==='all' ? 'col-span-2' : '']">
+              <span class="flex items-center justify-between">
+                <span class="font-bold text-emerald-950" x-text="j.label"></span>
+                <span class="font-arab text-xl text-gold-600" x-text="j.ar" dir="rtl"></span>
+              </span>
+              <span class="block text-xs text-slate-500 mt-0.5" x-text="j.sub"></span>
+              <span class="block text-[11px] font-semibold text-emerald-700 mt-1" x-text="juzMeta(j.id)"></span>
+            </button>
+          </template>
+        </div>
+      </div>
+      </div>
+
+      <!-- LANGKAH 3: Pilihan Surah -->
+      <div x-show="step===3" :class="stepAnim" id="step-3">
+      <!-- Pilihan Surah -->
+      <div class="glass rounded-3xl shadow-xl shadow-emerald-900/5 border border-white p-5 sm:p-6">
+        <div class="flex items-center justify-between gap-3 mb-1">
+          <h2 class="flex items-center gap-2 font-bold text-emerald-900"><i data-lucide="list-checks" class="w-5 h-5 text-gold-600"></i> Pilihan Surah</h2>
+          <span class="shrink-0 rounded-full px-3 py-1 text-xs font-extrabold transition-colors" :class="selCount ? 'bg-emerald-900 text-gold-300' : 'bg-rose-100 text-rose-600'" x-text="selCount+' / '+juzPool.length+' surah'"></span>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">Beri tanda ✓ pada surah yang ingin dilatih. Soal hanya diambil dari surah yang bertanda.</p>
+
+        <!-- peta proporsional: lebar segmen = jumlah ayat, warna = tingkat penguasaan -->
+        <div class="flex h-3.5 rounded-full overflow-hidden gap-px bg-white" role="group" aria-label="Peta surah pada Juz terpilih">
+          <template x-for="s in juzPool" :key="s.n">
+            <button type="button" @click="toggleSurah(s.n)" :title="s.lat+' · '+s.ayat+' ayat'" :aria-label="s.lat"
+              class="h-full transition-all duration-300 hover:brightness-110" :style="'flex:'+s.ayat+' 1 0%;min-width:2px'" :class="segClass(s)"></button>
+          </template>
+        </div>
+        <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[10px] text-slate-400 mt-1.5 mb-4">
+          <span>Lebar segmen = jumlah ayat</span>
+          <span class="flex items-center gap-2">
+            <span class="flex items-center gap-1"><i class="inline-block w-2 h-2 rounded-sm bg-emerald-300"></i>baru</span>
+            <span class="flex items-center gap-1"><i class="inline-block w-2 h-2 rounded-sm bg-rose-500"></i>&lt;50%</span>
+            <span class="flex items-center gap-1"><i class="inline-block w-2 h-2 rounded-sm bg-amber-400"></i>50–79%</span>
+            <span class="flex items-center gap-1"><i class="inline-block w-2 h-2 rounded-sm bg-emerald-600"></i>≥80%</span>
+            <span class="flex items-center gap-1"><i class="inline-block w-2 h-2 rounded-sm bg-slate-200"></i>tidak dipilih</span>
+          </span>
+        </div>
+
+        <!-- pilihan cepat -->
+        <div class="grid grid-cols-2 gap-2.5 mb-3">
+          <template x-for="p in presets" :key="p.id">
+            <button type="button" @click="applyPreset(p.id)"
+              class="inline-flex items-center justify-center gap-2 rounded-xl border px-3 py-2.5 text-sm font-bold transition-colors border-emerald-200 bg-white text-emerald-800 hover:bg-emerald-50">
+              <i :data-lucide="p.icon" class="w-4 h-4 text-gold-600"></i>
+              <span x-text="p.l"></span>
+            </button>
+          </template>
+        </div>
+
+        <!-- cari & urutkan -->
+        <div class="flex gap-2 mb-3">
+          <label class="relative flex-1 min-w-0">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+            <input type="search" x-model="search" autocomplete="off" placeholder="Cari: An-Nas, Kautsar, الناس, 114…"
+              class="w-full rounded-xl border border-slate-200 bg-white pl-9 pr-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-400">
+          </label>
+        </div>
+        <div class="grid grid-cols-3 gap-1 p-1 rounded-xl bg-slate-100 mb-3 text-xs font-bold">
+          <template x-for="o in [{v:'mushaf',l:'Urutan mushaf'},{v:'weak',l:'Terlemah dulu'},{v:'short',l:'Terpendek dulu'}]" :key="o.v">
+            <button type="button" @click="cfg.sort=o.v" class="rounded-lg py-2 transition-all"
+              :class="cfg.sort===o.v ? 'bg-white text-emerald-800 shadow' : 'text-slate-500 hover:text-emerald-700'" x-text="o.l"></button>
+          </template>
+        </div>
+
+        <!-- daftar surah dengan tanda centang -->
+        <div class="max-h-[26rem] overflow-y-auto scroll-thin rounded-2xl border border-slate-200 bg-white">
+          <template x-for="g in listGroups()" :key="g.key">
+            <div>
+              <div class="sticky top-0 z-10 flex items-center justify-between gap-3 px-3 py-2 bg-emerald-50/95 backdrop-blur border-b border-emerald-100">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <button type="button" x-show="g.juz" @click="toggleGroup(g.juz)" role="checkbox"
+                    :aria-checked="groupState(g.juz)==='all' ? 'true' : (groupState(g.juz)==='some' ? 'mixed' : 'false')" :aria-label="'Pilih semua surah Juz '+g.juz"
+                    class="shrink-0 w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all"
+                    :class="groupState(g.juz)==='none' ? 'border-slate-300 bg-white' : 'bg-emerald-600 border-emerald-600 text-white'">
+                    <svg x-show="groupState(g.juz)==='all'" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                    <svg x-show="groupState(g.juz)==='some'" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"><path d="M6 12h12"/></svg>
+                  </button>
+                  <span class="font-extrabold text-emerald-900 text-sm truncate" x-text="g.title"></span>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-700" x-text="g.juz ? groupCount(g.juz)+' surah' : g.items.length+' surah'"></span>
+              </div>
+              <ul>
+                <template x-for="s in g.items" :key="s.n">
+                  <li>
+                    <button type="button" role="checkbox" :aria-checked="isOn(s.n)" @click="toggleSurah(s.n)"
+                      class="w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors hover:bg-emerald-50/70 border-b border-slate-100"
+                      :class="isOn(s.n) ? '' : 'opacity-55'">
+                      <span class="shrink-0 w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all duration-200"
+                            :class="isOn(s.n) ? 'bg-emerald-600 border-emerald-600 text-white scale-100' : 'border-slate-300 bg-white'">
+                        <svg x-show="isOn(s.n)" viewBox="0 0 24 24" class="w-4 h-4 anim-pop" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                      </span>
+                      <span class="shrink-0 w-7 text-center text-xs font-bold text-slate-400" x-text="s.n"></span>
+                      <span class="flex-1 min-w-0">
+                        <span class="block font-semibold text-emerald-950 truncate" x-text="s.lat"></span>
+                        <span class="block text-[11px] text-slate-500" x-text="s.ayat+' ayat'+(g.juz ? '' : ' · Juz '+s.juz)"></span>
+                      </span>
+                      <span class="shrink-0 w-14 text-right">
+                        <span x-show="statOf(s.n)" class="block">
+                          <span class="block h-1.5 rounded-full bg-slate-100 overflow-hidden"><span class="block h-full rounded-full transition-all" :class="mColor(s.n)" :style="'width:'+pctOf(s.n)+'%'"></span></span>
+                          <span class="block text-[10px] text-slate-400 mt-0.5" x-text="ratioOf(s.n)"></span>
+                        </span>
+                        <span x-show="!statOf(s.n)" class="inline-block rounded-full bg-emerald-50 text-emerald-600 text-[10px] font-bold px-2 py-0.5">baru</span>
+                      </span>
+                      <span class="shrink-0 font-arab text-xl text-gold-600 leading-none" dir="rtl" x-text="s.ar"></span>
+                    </button>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </template>
+          <div x-show="listGroups().length===0" class="p-8 text-center text-sm text-slate-400">Tidak ada surah yang cocok dengan pencarian.</div>
+        </div>
+
+        <!-- ringkasan kumpulan soal -->
+        <div class="mt-4 rounded-2xl bg-emerald-50 border border-emerald-100 p-3.5 text-sm text-emerald-900">
+          <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <span><b x-text="selCount"></b> surah</span><span class="text-emerald-300">•</span>
+            <span><b x-text="selAyat"></b> ayat</span><span class="text-emerald-300">•</span>
+            <span><b x-text="availQ"></b> soal unik tersedia</span>
+          </div>
+          <p x-show="selCount>0 && +cfg.count>availQ" class="mt-1.5 text-xs font-semibold text-amber-700 flex items-start gap-1.5">
+            <i data-lucide="triangle-alert" class="w-3.5 h-3.5 mt-0.5 shrink-0"></i>
+            <span x-text="'Jumlah soal ('+cfg.count+') melebihi soal unik ('+availQ+'). Sebagian soal akan berulang — tambah surah atau kurangi jumlah soal.'"></span>
+          </p>
+        </div>
+
+        <!-- sebaran soal -->
+        <div class="mt-4">
+          <div class="font-semibold text-emerald-950 flex items-center gap-2"><i data-lucide="shuffle" class="w-4 h-4 text-gold-600"></i> Sebaran Soal</div>
+          <div class="text-xs text-slate-500 mt-0.5 mb-2.5">Menentukan seberapa sering tiap surah muncul.</div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <template x-for="t in [{v:'surah',l:'Merata per surah',s:'surah pendek & panjang sama sering'},{v:'ayat',l:'Sesuai jumlah ayat',s:'surah panjang lebih sering'}]" :key="t.v">
+              <button type="button" @click="cfg.dist=t.v"
+                class="rounded-2xl border-2 py-2.5 px-2 transition-all duration-200"
+                :class="cfg.dist===t.v ? 'border-emerald-500 bg-emerald-900 text-gold-300 shadow-md' : 'border-slate-200 bg-white text-slate-600 hover:border-emerald-300'">
+                <span class="block font-extrabold text-sm" x-text="t.l"></span>
+                <span class="block text-[10px] opacity-80" x-text="t.s"></span>
+              </button>
+            </template>
+          </div>
+        </div>
+
+        <div x-show="hasStats()" class="mt-4 flex items-center justify-between gap-3 text-xs text-slate-400">
+          <span>Warna &amp; bar penguasaan berasal dari riwayat jawaban Anda di perangkat ini.</span>
+          <button type="button" @click="resetStats()" class="shrink-0 font-bold underline underline-offset-2 transition-colors" :class="confirmReset ? 'text-rose-600' : 'text-slate-500 hover:text-rose-600'" x-text="confirmReset ? 'Ketuk lagi untuk hapus' : 'Hapus riwayat'"></button>
+        </div>
+      </div>
+      </div>
+
+      <!-- LANGKAH 4: Jumlah soal & audio + ringkasan -->
+      <div x-show="step===4" :class="stepAnim" id="step-4" class="space-y-5">
+      <!-- Count & Audio -->
+      <div class="glass rounded-3xl shadow-xl shadow-emerald-900/5 border border-white p-5 sm:p-6">
+        <h2 class="flex items-center gap-2 font-bold text-emerald-900 mb-4"><i data-lucide="settings-2" class="w-5 h-5 text-gold-600"></i> Jumlah Soal &amp; Audio</h2>
+        <div class="grid grid-cols-4 gap-2.5">
+          <template x-for="c in [5,10,25,50]" :key="c">
+            <button type="button" @click="cfg.count=c"
+              class="rounded-2xl border-2 py-3 font-extrabold text-lg transition-all duration-200"
+              :class="cfg.count===c ? 'border-emerald-500 bg-emerald-900 text-gold-300 shadow-md' : 'border-slate-200 bg-white text-slate-600 hover:border-emerald-300'"
+              x-text="c"></button>
+          </template>
+        </div>
+        <p class="text-xs text-slate-500 mt-2">soal per sesi</p>
+
+        <div class="mt-5" x-show="isVoiceMode()" x-transition>
+          <div class="font-semibold text-emerald-950 flex items-center gap-2"><i data-lucide="rotate-ccw" class="w-4 h-4 text-gold-600"></i> Kesempatan Mencoba (Mode Suara)</div>
+          <div class="text-xs text-slate-500 mt-0.5 mb-2.5">Jika bacaan belum tepat, Anda bisa mengulang sebelum jawaban dicatat salah.</div>
+          <div class="grid grid-cols-3 gap-2.5">
+            <template x-for="t in [{v:1,l:'1×',s:'tanpa ulang'},{v:3,l:'3×',s:'dua kali ulang'},{v:0,l:'Tak terbatas',s:'sampai benar'}]" :key="t.v">
+              <button type="button" @click="cfg.tries=t.v"
+                class="rounded-2xl border-2 py-2.5 px-1 transition-all duration-200"
+                :class="+cfg.tries===t.v ? 'border-emerald-500 bg-emerald-900 text-gold-300 shadow-md' : 'border-slate-200 bg-white text-slate-600 hover:border-emerald-300'">
+                <span class="block font-extrabold" x-text="t.l"></span>
+                <span class="block text-[10px] opacity-80" x-text="t.s"></span>
+              </button>
+            </template>
+          </div>
+        </div>
+
+        <div class="mt-5" x-show="isVoiceMode()" x-transition>
+          <div class="font-semibold text-emerald-950 flex items-center gap-2"><i data-lucide="gauge" class="w-4 h-4 text-gold-600"></i> Ketepatan Penilaian Suara</div>
+          <div class="text-xs text-slate-500 mt-0.5 mb-2.5" x-text="cfg.mode==='surahvoice' ? 'Seberapa mirip ucapan nama surah dengan yang benar agar dinilai benar.' : 'Seberapa mirip bacaan ayat dengan yang benar agar dinilai benar.'"></div>
+          <div class="grid grid-cols-3 gap-2.5">
+            <template x-for="t in [{v:'loose',l:'Longgar'},{v:'normal',l:'Standar'},{v:'strict',l:'Ketat'}]" :key="t.v">
+              <button type="button" @click="cfg.strict=t.v"
+                class="rounded-2xl border-2 py-2.5 px-1 transition-all duration-200"
+                :class="cfg.strict===t.v ? 'border-emerald-500 bg-emerald-900 text-gold-300 shadow-md' : 'border-slate-200 bg-white text-slate-600 hover:border-emerald-300'">
+                <span class="block font-extrabold" x-text="t.l"></span>
+                <span class="block text-[10px] opacity-80" x-text="'minimal '+thresholdOf(t.v)+'%'"></span>
+              </button>
+            </template>
+          </div>
+        </div>
+
+        <div class="mt-5" x-show="cfg.mode==='surahvoice'" x-transition>
+          <div class="font-semibold text-emerald-950 flex items-center gap-2"><i data-lucide="languages" class="w-4 h-4 text-gold-600"></i> Bahasa Pengenalan Suara (Tebak Surah)</div>
+          <div class="text-xs text-slate-500 mt-0.5 mb-2.5">Pilih sesuai cara Anda menyebut nama surah. Keduanya dinilai terhadap nama Arab &amp; Latin.</div>
+          <div class="grid grid-cols-2 gap-2.5">
+            <template x-for="t in [{v:'ar-SA',l:'Arab',s:'mis. “النَّاس”'},{v:'id-ID',l:'Indonesia',s:'mis. “An-Nas”'}]" :key="t.v">
+              <button type="button" @click="cfg.nameLang=t.v"
+                class="rounded-2xl border-2 py-2.5 px-1 transition-all duration-200"
+                :class="cfg.nameLang===t.v ? 'border-emerald-500 bg-emerald-900 text-gold-300 shadow-md' : 'border-slate-200 bg-white text-slate-600 hover:border-emerald-300'">
+                <span class="block font-extrabold" x-text="t.l"></span>
+                <span class="block text-[10px] opacity-80" x-text="t.s"></span>
+              </button>
+            </template>
+          </div>
+        </div>
+
+        <div class="mt-5 flex items-center justify-between gap-4 rounded-2xl bg-white border border-slate-200 p-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center"><i data-lucide="headphones" class="w-5 h-5"></i></span>
+            <div>
+              <div class="font-semibold text-emerald-950">Auto-play Murottal</div>
+              <div class="text-xs text-slate-500">Putar audio ayat otomatis saat soal muncul</div>
+            </div>
+          </div>
+          <button type="button" role="switch" :aria-checked="cfg.autoplay" @click="cfg.autoplay=!cfg.autoplay"
+                  class="relative w-14 h-8 rounded-full transition-colors duration-300 shrink-0"
+                  :class="cfg.autoplay ? 'bg-emerald-500' : 'bg-slate-300'">
+            <span class="kw absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow transition-transform duration-300"
+                  :class="cfg.autoplay ? 'translate-x-6' : ''"></span>
+          </button>
+        </div>
+
+        <div class="mt-3 flex items-center justify-between gap-4 rounded-2xl bg-white border border-slate-200 p-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center"><i data-lucide="volume-2" class="w-5 h-5"></i></span>
+            <div>
+              <div class="font-semibold text-emerald-950">Samakan Volume Murottal</div>
+              <div class="text-xs text-slate-500">Menyeragamkan level rekaman antar ayat. Besar-kecilnya suara tetap mengikuti volume perangkat Anda.</div>
+            </div>
+          </div>
+          <button type="button" role="switch" :aria-checked="cfg.normalize" @click="cfg.normalize=!cfg.normalize"
+                  class="relative w-14 h-8 rounded-full transition-colors duration-300 shrink-0"
+                  :class="cfg.normalize ? 'bg-emerald-500' : 'bg-slate-300'">
+            <span class="kw absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow transition-transform duration-300"
+                  :class="cfg.normalize ? 'translate-x-6' : ''"></span>
+          </button>
+        </div>
+
+        <div class="mt-3 flex items-center justify-between gap-4 rounded-2xl bg-white border border-slate-200 p-4">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center"><i data-lucide="book-open" class="w-5 h-5"></i></span>
+            <div>
+              <div class="font-semibold text-emerald-950">Tampilkan Nama Surah &amp; Ayat</div>
+              <div class="text-xs text-slate-500">Untuk soal Sambung Ayat (pilihan ganda &amp; suara). Matikan agar lebih menantang.</div>
+            </div>
+          </div>
+          <button type="button" role="switch" :aria-checked="cfg.showRef" @click="cfg.showRef=!cfg.showRef"
+                  class="relative w-14 h-8 rounded-full transition-colors duration-300 shrink-0"
+                  :class="cfg.showRef ? 'bg-emerald-500' : 'bg-slate-300'">
+            <span class="kw absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow transition-transform duration-300"
+                  :class="cfg.showRef ? 'translate-x-6' : ''"></span>
+          </button>
+        </div>
+      </div>
+
+        <!-- Ringkasan sesi -->
+        <div class="glass rounded-3xl shadow-xl shadow-emerald-900/5 border border-white p-5 sm:p-6">
+          <h2 class="flex items-center gap-2 font-bold text-emerald-900 mb-3"><i data-lucide="clipboard-check" class="w-5 h-5 text-gold-600"></i> Ringkasan Sesi</h2>
+          <dl class="divide-y divide-slate-100 text-sm">
+            <div class="flex items-center justify-between gap-3 py-2.5">
+              <div class="min-w-0"><dt class="text-[11px] font-bold uppercase tracking-wide text-slate-400">Jenis kuis</dt><dd class="font-semibold text-emerald-950" x-text="'Mode '+(curMode().no)+': '+curMode().title"></dd></div>
+              <button type="button" @click="goStep(1)" class="shrink-0 text-xs font-bold text-emerald-700 underline underline-offset-2">Ubah</button>
+            </div>
+            <div class="flex items-center justify-between gap-3 py-2.5">
+              <div class="min-w-0"><dt class="text-[11px] font-bold uppercase tracking-wide text-slate-400">Juz</dt><dd class="font-semibold text-emerald-950" x-text="curJuz().label"></dd></div>
+              <button type="button" @click="goStep(2)" class="shrink-0 text-xs font-bold text-emerald-700 underline underline-offset-2">Ubah</button>
+            </div>
+            <div class="flex items-center justify-between gap-3 py-2.5">
+              <div class="min-w-0"><dt class="text-[11px] font-bold uppercase tracking-wide text-slate-400">Surah</dt><dd class="font-semibold text-emerald-950" x-text="selCount+' surah · '+selAyat+' ayat'"></dd></div>
+              <button type="button" @click="goStep(3)" class="shrink-0 text-xs font-bold text-emerald-700 underline underline-offset-2">Ubah</button>
+            </div>
+            <div class="flex items-center justify-between gap-3 py-2.5">
+              <div class="min-w-0"><dt class="text-[11px] font-bold uppercase tracking-wide text-slate-400">Soal</dt><dd class="font-semibold text-emerald-950" x-text="cfg.count+' soal per sesi'"></dd></div>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <!-- Navigasi langkah -->
+      <div class="sticky bottom-3 z-30">
+        <div class="glass rounded-2xl border border-white shadow-xl shadow-emerald-900/10 p-2.5 flex items-stretch gap-2.5">
+          <button type="button" id="btn-prev" x-show="step>1" @click="wizPrev()"
+            class="rounded-xl border-2 border-slate-200 bg-white text-emerald-900 font-bold px-4 py-3 flex items-center justify-center gap-1.5 hover:border-emerald-300 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i> Kembali
+          </button>
+          <button type="button" id="btn-next" x-show="step<4" @click="wizNext()" :disabled="!canNext()"
+            class="on-gold flex-1 rounded-xl py-3 text-base font-extrabold text-emerald-950 shadow-lg shadow-amber-500/25 transition-all duration-200 flex items-center justify-center gap-2"
+            :class="canNext() ? 'hover:-translate-y-0.5 active:translate-y-0' : 'opacity-50 cursor-not-allowed'"
+            style="background:linear-gradient(120deg,#D4AF37,#F59E0B)">
+            Lanjut <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+          <button type="button" id="btn-start" x-show="step===4" @click="start()" :disabled="selCount===0"
+            class="on-gold flex-1 rounded-xl py-3 text-lg font-extrabold text-emerald-950 shadow-lg shadow-amber-500/25 transition-all duration-200 flex items-center justify-center gap-2"
+            :class="selCount===0 ? 'opacity-50 cursor-not-allowed' : 'hover:-translate-y-0.5 active:translate-y-0'"
+            style="background:linear-gradient(120deg,#D4AF37,#F59E0B)">
+            <i data-lucide="sparkles" class="w-5 h-5"></i> Mulai Kuis <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+      <p x-show="step===3 && selCount===0" class="text-center text-xs font-semibold text-rose-600 -mt-2">Pilih minimal satu surah untuk melanjutkan.</p>
+
+      <!-- Penutup -->
+      <div class="pt-2 pb-2 text-center">
+        <div class="ornament w-40 mx-auto mb-3"></div>
+        <p class="text-sm font-semibold text-emerald-900/80 px-6">Semoga Bermanfaat Dunia &amp; Akhirat, Amiin</p>
+      </div>
+    </main>
+  </section>
+
+  <!-- ============================ QUIZ ============================ -->
+  <section x-show="screen==='quiz'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
+    <div class="sticky top-0 z-30 glass border-b border-emerald-100/70">
+      <div class="max-w-2xl mx-auto px-4 py-3 flex items-center gap-3">
+        <button type="button" @click="quit()" class="flex items-center gap-1.5 rounded-xl border border-rose-200 bg-rose-50 text-rose-600 hover:bg-rose-100 px-3 py-2 text-sm font-bold transition-colors">
+          <i data-lucide="octagon-x" class="w-4 h-4"></i> Berhenti
+        </button>
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center justify-between text-xs font-semibold text-emerald-900 mb-1.5">
+            <span x-text="'Soal '+Math.max(qIndex,1)+' / '+total"></span>
+            <span class="text-slate-500" x-text="modeTitle()"></span>
+          </div>
+          <div class="h-2 rounded-full bg-emerald-100 overflow-hidden">
+            <div class="h-full rounded-full transition-all duration-500" style="background:linear-gradient(90deg,#10B981,#D4AF37)" :style="'width:'+progressPct()+'%'"></div>
+          </div>
+        </div>
+        <div class="flex items-center gap-1.5 rounded-xl bg-emerald-900 text-gold-300 px-3 py-2 text-sm font-extrabold">
+          <i data-lucide="trophy" class="w-4 h-4"></i><span x-text="correctCount"></span>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-2xl mx-auto px-4 pt-5 space-y-4">
+
+      <!-- loading -->
+      <div x-show="loading" class="glass rounded-3xl border border-white shadow-lg p-12 flex flex-col items-center gap-4 text-center">
+        <div class="spinner"></div>
+        <p class="text-sm text-slate-500">Memuat ayat dari Alquran.cloud…</p>
+      </div>
+
+      <!-- error -->
+      <div x-show="loadError && !loading" class="glass rounded-3xl border border-rose-100 shadow-lg p-8 text-center space-y-4">
+        <i data-lucide="circle-alert" class="w-10 h-10 text-rose-500 mx-auto"></i>
+        <p class="text-slate-700 font-medium" x-text="loadError"></p>
+        <div class="flex gap-3 justify-center">
+          <button @click="showQuestion()" class="rounded-xl bg-emerald-700 text-white px-5 py-2.5 font-semibold flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4"></i> Coba Lagi</button>
+          <button @click="quit()" class="rounded-xl border border-slate-300 px-5 py-2.5 font-semibold text-slate-600">Selesai</button>
+        </div>
+      </div>
+
+      <!-- question -->
+      <template x-if="q && !loading">
+        <div class="space-y-4 anim-fade-up" :key="qIndex">
+
+          <!-- verse card -->
+          <div class="rounded-3xl overflow-hidden shadow-xl shadow-emerald-900/10 border border-emerald-100 bg-white">
+            <div class="hero relative text-white px-5 py-4">
+              <div class="relative z-10">
+                <div class="text-[11px] uppercase tracking-widest text-gold-300 font-bold" x-text="q.type==='surah' ? 'Tebak Nama Surah' : (q.type==='surahvoice' ? 'Tebak Surah — Suara' : (q.type==='mcq' ? 'Sambung Ayat — Pilihan Ganda' : 'Sambung Ayat — Suara'))"></div>
+                <div class="font-bold mt-0.5" x-text="q.type==='surah' ? 'Ayat ini terdapat dalam surah apa?' : (q.type==='surahvoice' ? 'Sebutkan nama surah dari ayat ini!' : (q.type==='mcq' ? 'Manakah ayat setelah ayat berikut?' : 'Lanjutkan bacaan ayat berikut!'))"></div>
+                <div x-show="!isSurahQ(q) && cfg.showRef" class="mt-2 inline-flex items-center gap-2 text-xs bg-white/10 border border-white/20 rounded-full px-3 py-1">
+                  <i data-lucide="book-open" class="w-3.5 h-3.5 text-gold-300"></i>
+                  <span x-text="'QS. '+q.surah.lat+' · Ayat '+q.ayah.n"></span>
+                  <span class="font-arab text-base text-gold-300" dir="rtl" x-text="q.surah.ar"></span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 sm:p-6">
+              <p class="font-arab text-center text-[1.65rem] sm:text-[2.1rem] leading-[2.3] text-emerald-950" dir="rtl">
+                <span x-text="q.ayah.text"></span>
+                <span class="text-gold-600" x-show="isSurahQ(q) || cfg.showRef"> ﴿<span x-text="toAr(q.ayah.n)"></span>﴾</span>
+              </p>
+              <div class="mt-4 flex items-center justify-center">
+                <button type="button" @click="playAyah(q.ayah,'q')"
+                        class="flex items-center gap-3 rounded-full border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 pl-2 pr-5 py-2 transition-colors">
+                  <span class="w-10 h-10 rounded-full bg-emerald-700 text-white flex items-center justify-center shadow">
+                    <span x-show="playingKey!=='q'"><i data-lucide="play" class="w-4 h-4"></i></span>
+                    <span x-show="playingKey==='q'"><i data-lucide="pause" class="w-4 h-4"></i></span>
+                  </span>
+                  <span class="text-emerald-800 flex items-end gap-[3px] h-5" :class="playingKey==='q' ? 'wave-on' : ''">
+                    <template x-for="i in 6" :key="i"><span class="wave-bar" :style="'animation-delay:'+(i*0.11)+'s'"></span></template>
+                  </span>
+                  <span class="text-sm font-semibold text-emerald-900" x-text="playingKey==='q' ? 'Memutar…' : 'Dengarkan Ayat'"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MULTIPLE CHOICE -->
+          <div x-show="showChoices()" class="grid gap-3">
+            <template x-for="(o,i) in q.options" :key="i">
+              <button type="button" @click="choose(i)" :disabled="answered"
+                class="w-full text-left rounded-2xl border-2 p-4 flex items-center gap-4 transition-all duration-200 disabled:cursor-default"
+                :class="optClass(o,i)">
+                <span class="shrink-0 w-9 h-9 rounded-xl flex items-center justify-center font-extrabold text-sm"
+                      :class="answered && o.isCorrect ? 'bg-emerald-600 text-white' : (answered && i===selected ? 'bg-rose-500 text-white' : 'bg-emerald-900 text-gold-300')"
+                      x-text="'ABCD'[i]"></span>
+                <span class="flex-1 min-w-0" :class="q.type==='mcq' ? 'font-arab text-xl sm:text-2xl leading-[2.1] text-emerald-950 text-right' : 'font-bold text-emerald-950'"
+                      :dir="q.type==='mcq' ? 'rtl' : 'ltr'">
+                  <template x-if="isSurahQ(q)">
+                    <span class="flex items-center justify-between gap-3">
+                      <span x-text="o.text"></span>
+                      <span class="font-arab text-xl text-gold-600" dir="rtl" x-text="o.ar"></span>
+                    </span>
+                  </template>
+                  <template x-if="q.type==='mcq'"><span x-text="o.text"></span></template>
+                </span>
+                <span class="shrink-0" x-show="answered && o.isCorrect"><i data-lucide="circle-check" class="w-6 h-6 text-emerald-600"></i></span>
+                <span class="shrink-0" x-show="answered && !o.isCorrect && i===selected"><i data-lucide="circle-x" class="w-6 h-6 text-rose-500"></i></span>
+              </button>
+            </template>
+          </div>
+
+          <div x-show="q.type==='surahvoice' && choiceMode && speechSupported && !answered" class="flex justify-center">
+            <button type="button" @click="disableChoice()"
+              class="inline-flex items-center gap-2 rounded-full border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-semibold text-sm px-5 py-2.5 transition-colors">
+              <i data-lucide="mic" class="w-4 h-4"></i> Kembali menjawab dengan suara
+            </button>
+          </div>
+
+          <!-- VOICE -->
+          <div x-show="isVoice(q) && !answered && !choiceMode" class="glass rounded-3xl border border-white shadow-xl p-6 text-center space-y-5">
+
+            <div x-show="!speechSupported" class="rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-sm p-4 text-left">
+              <div class="font-bold flex items-center gap-2 mb-1"><i data-lucide="mic-off" class="w-4 h-4"></i> Pengenalan suara tidak tersedia</div>
+              Browser ini belum mendukung Web Speech API. Gunakan Chrome, Edge, atau Safari — atau pakai tombol <b>Bandingkan Dengarkan Audio Asli</b> di bawah untuk evaluasi mandiri.
+            </div>
+
+            <div class="relative w-28 h-28 mx-auto" x-show="speechSupported && !selfMode && !missed">
+              <span class="mic-ring" x-show="listening"></span>
+              <span class="mic-ring" x-show="listening" style="animation-delay:.8s"></span>
+              <button type="button" @click="toggleMic()"
+                class="relative w-28 h-28 rounded-full flex items-center justify-center text-white shadow-2xl transition-transform duration-200 active:scale-95"
+                :disabled="processing"
+                :class="listening ? 'bg-rose-500 mic-live' : (processing ? 'bg-slate-400' : 'bg-gradient-to-br from-emerald-500 to-emerald-800 hover:scale-105')"
+                :aria-label="listening ? 'Hentikan rekaman' : 'Mulai rekam'">
+                <span x-show="!listening && !processing"><i data-lucide="mic" class="w-11 h-11"></i></span>
+                <span x-show="listening"><i data-lucide="square" class="w-9 h-9"></i></span>
+                <span x-show="processing" class="spinner" style="border-color:rgba(255,255,255,.35);border-top-color:#fff"></span>
+              </button>
+            </div>
+
+            <div x-show="speechSupported && !selfMode && !missed">
+              <div class="font-bold text-emerald-950" x-text="listening ? 'Mendengarkan… tekan untuk selesai' : (processing ? 'Menilai bacaan…' : (q.type==='surahvoice' ? 'Tekan & Sebutkan Nama Surahnya' : 'Tekan & Bacakan Ayat Berikutnya'))"></div>
+              <div class="mt-3 mx-auto h-8 flex items-end justify-center gap-[4px] text-rose-500" :class="listening ? 'wave-on' : 'opacity-30'">
+                <template x-for="i in 14" :key="i"><span class="wave-bar" :style="'animation-delay:'+((i%7)*0.09)+'s'"></span></template>
+              </div>
+            </div>
+
+            <!-- live transcription -->
+            <div x-show="speechSupported && !selfMode && !missed" class="rounded-2xl border border-dashed border-emerald-200 bg-white/80 p-4 min-h-[88px]" :class="isLatinLang() ? 'text-left' : 'text-right'" :dir="isLatinLang() ? 'ltr' : 'rtl'">
+              <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider text-left mb-1" dir="ltr">Transkripsi langsung<span x-show="q.type==='surahvoice'" x-text="' · '+(cfg.nameLang==='id-ID' ? 'Indonesia' : 'Arab')"></span></div>
+              <p class="text-2xl leading-[2.1] text-emerald-950" :class="isLatinLang() ? 'font-sans font-semibold' : 'font-arab'">
+                <span x-text="finalText"></span>
+                <span class="text-slate-400" x-text="interim"></span>
+                <span x-show="!finalText && !interim" class="text-slate-300 text-lg">…ما تقوله سيظهر هنا</span>
+              </p>
+            </div>
+
+            <!-- RETRY PANEL: tampil saat bacaan belum tepat dan masih boleh mencoba lagi -->
+            <div id="miss-card" x-show="missed && !selfMode" x-transition class="text-left rounded-2xl border-2 border-rose-200 bg-rose-50 p-4 sm:p-5 space-y-4 anim-pop">
+              <div class="flex items-center gap-4">
+                <template x-if="voice && voice.score!==null">
+                  <div class="relative w-16 h-16 shrink-0">
+                    <svg viewBox="0 0 100 100" class="w-16 h-16 -rotate-90">
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="#fff" stroke-width="12"/>
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="#F43F5E" stroke-width="12" stroke-linecap="round" class="ring-prog"
+                        :stroke-dasharray="264" :stroke-dashoffset="264*(1-(voice ? voice.score : 0)/100)"/>
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center font-extrabold text-rose-600" x-text="(voice ? voice.score : 0)+'%'"></div>
+                  </div>
+                </template>
+                <div class="min-w-0">
+                  <div class="text-lg font-extrabold text-rose-700">Belum tepat — coba lagi!</div>
+                  <div class="text-sm text-slate-600" x-text="'Kemiripan '+(voice?voice.score:0)+'% · butuh minimal '+passPct()+'%'"></div>
+                  <div class="text-xs font-semibold text-rose-500 mt-0.5" x-text="triesInfo()"></div>
+                </div>
+              </div>
+
+              <div x-show="q.type==='voice'" class="rounded-xl bg-white border border-rose-100 p-3">
+                <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-1">
+                  Petunjuk · <span x-text="hitCount()"></span> dari <span x-text="voice ? voice.words.length : 0"></span> kata sudah benar
+                </div>
+                <p class="font-arab text-2xl leading-[2.2] text-right" dir="rtl">
+                  <template x-for="(w,k) in hintWords()" :key="k">
+                    <span :class="w.hit ? 'text-emerald-700' : 'text-slate-300'" x-text="w.t+' '"></span>
+                  </template>
+                </p>
+              </div>
+
+              <div x-show="q.type==='surahvoice'" class="rounded-xl bg-white border border-rose-100 p-3 space-y-1.5">
+                <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Petunjuk</div>
+                <p x-show="voice && voice.best" class="text-sm text-rose-600 font-semibold" x-text="voice && voice.best ? 'Terdengar lebih mirip: '+voice.best.lat+' ('+voice.best.pct+'%)' : ''"></p>
+                <template x-for="(h,k) in surahHints()" :key="k">
+                  <p class="text-sm text-slate-600 flex gap-2"><span class="text-gold-600">•</span><span x-text="h"></span></p>
+                </template>
+              </div>
+
+              <div x-show="voice && voice.transcript" class="rounded-xl bg-white border border-slate-100 p-3">
+                <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-1" x-text="q.type==='surahvoice' ? 'Yang terdengar' : 'Bacaan Anda'"></div>
+                <p class="text-xl leading-[2.1] text-slate-600" :class="isLatinLang() ? 'font-sans text-left' : 'font-arab text-right'" :dir="isLatinLang() ? 'ltr' : 'rtl'" x-text="voice ? voice.transcript : ''"></p>
+              </div>
+
+              <div class="grid gap-2.5">
+                <button type="button" @click="retry()"
+                  class="w-full rounded-xl py-3.5 font-extrabold text-white bg-gradient-to-br from-emerald-500 to-emerald-800 shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                  <i data-lucide="rotate-ccw" class="w-5 h-5"></i> Coba Lagi
+                </button>
+                <div class="grid grid-cols-2 gap-2.5">
+                  <button type="button" @click="playAyah(q.ayah,'q')"
+                    class="rounded-xl py-2.5 text-sm font-semibold border border-emerald-200 bg-white text-emerald-800 hover:bg-emerald-50 flex items-center justify-center gap-2">
+                    <i data-lucide="volume-2" class="w-4 h-4"></i> Dengar Ayat Soal
+                  </button>
+                  <button type="button" @click="giveUp()"
+                    class="rounded-xl py-2.5 text-sm font-semibold border border-slate-300 bg-white text-slate-600 hover:bg-slate-50 flex items-center justify-center gap-2">
+                    <i data-lucide="eye" class="w-4 h-4"></i> Lihat Jawaban
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- penanda percobaan ke-N saat mengulang -->
+            <div x-show="attempts>0 && !missed && !selfMode && speechSupported" class="text-xs font-bold text-rose-500 uppercase tracking-wider" x-text="attemptLabel()"></div>
+
+            <p x-show="micError" class="text-sm text-rose-600 font-medium bg-rose-50 border border-rose-100 rounded-xl p-3" x-text="micError"></p>
+
+            <!-- self evaluation -->
+            <div x-show="selfMode" class="text-left space-y-4 anim-fade-up">
+              <div class="rounded-2xl bg-emerald-50 border border-emerald-200 p-4">
+                <div class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1" x-text="cfg.showRef && q.next ? 'Ayat berikutnya · Ayat '+q.next.n : 'Ayat berikutnya'"></div>
+                <p class="font-arab text-2xl sm:text-3xl leading-[2.2] text-emerald-950 text-right" dir="rtl" x-text="q.next ? q.next.text : ''"></p>
+              </div>
+              <p class="text-sm text-slate-600">Dengarkan audio asli, lalu nilai bacaan Anda sendiri dengan jujur:</p>
+              <div class="grid grid-cols-2 gap-3">
+                <button @click="selfEval(true)" class="rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 flex items-center justify-center gap-2"><i data-lucide="check" class="w-4 h-4"></i> Sudah sesuai</button>
+                <button @click="selfEval(false)" class="rounded-xl bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 flex items-center justify-center gap-2"><i data-lucide="x" class="w-4 h-4"></i> Belum sesuai</button>
+              </div>
+            </div>
+
+            <!-- fallback -->
+            <button x-show="q.type==='voice' && !selfMode" type="button" @click="startSelfMode()"
+              class="inline-flex items-center gap-2 rounded-full border border-gold-500/60 bg-amber-50 hover:bg-amber-100 text-gold-700 font-semibold text-sm px-5 py-2.5 transition-colors">
+              <i data-lucide="audio-lines" class="w-4 h-4"></i> Bandingkan Dengarkan Audio Asli
+            </button>
+            <button x-show="q.type==='surahvoice'" type="button" @click="enableChoice()"
+              class="inline-flex items-center gap-2 rounded-full border border-gold-500/60 bg-amber-50 hover:bg-amber-100 text-gold-700 font-semibold text-sm px-5 py-2.5 transition-colors">
+              <i data-lucide="list-checks" class="w-4 h-4"></i> Jawab dengan Pilihan Ganda
+            </button>
+          </div>
+
+          <!-- SKIP -->
+          <div x-show="!answered" class="flex justify-center">
+            <button type="button" @click="skip()"
+              class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white hover:bg-slate-50 hover:border-emerald-400 text-slate-600 hover:text-emerald-800 font-semibold text-sm px-5 py-2.5 transition-colors">
+              <span x-text="qIndex>=total ? 'Lewati & Lihat Hasil' : 'Lewati / Soal Berikutnya'"></span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- FEEDBACK -->
+          <div id="fb-card" x-show="answered" class="scroll-mt-24 rounded-3xl border-2 shadow-xl p-5 sm:p-6 space-y-4 anim-pop"
+               :class="lastCorrect ? 'bg-emerald-50 border-emerald-300' : 'bg-rose-50 border-rose-300'">
+            <div class="flex items-center gap-4">
+              <!-- ring (voice) -->
+              <template x-if="isVoice(q) && voice && voice.score!==null">
+                <div class="relative w-20 h-20 shrink-0">
+                  <svg viewBox="0 0 100 100" class="w-20 h-20 -rotate-90">
+                    <circle cx="50" cy="50" r="42" fill="none" stroke="#fff" stroke-width="10"/>
+                    <circle cx="50" cy="50" r="42" fill="none" stroke-linecap="round" stroke-width="10"
+                      :stroke="lastCorrect ? '#059669' : '#F43F5E'" class="ring-prog"
+                      :stroke-dasharray="264" :stroke-dashoffset="264*(1-(voice ? voice.score : 0)/100)"/>
+                  </svg>
+                  <div class="absolute inset-0 flex items-center justify-center font-extrabold text-lg" :class="lastCorrect ? 'text-emerald-700' : 'text-rose-600'" x-text="(voice ? voice.score : 0)+'%'"></div>
+                </div>
+              </template>
+              <template x-if="!(isVoice(q) && voice && voice.score!==null)">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center shrink-0" :class="lastCorrect ? 'bg-emerald-600' : 'bg-rose-500'">
+                  <span x-show="lastCorrect"><i data-lucide="check" class="w-8 h-8 text-white"></i></span>
+                  <span x-show="!lastCorrect"><i data-lucide="x" class="w-8 h-8 text-white"></i></span>
+                </div>
+              </template>
+              <div class="min-w-0">
+                <div class="text-xl font-extrabold" :class="lastCorrect ? 'text-emerald-800' : 'text-rose-700'"
+                     x-text="lastCorrect ? (q.type==='voice' ? 'Benar / Lulus Tajwid Dasar' : 'Benar!') : 'Salah'"></div>
+                <div class="text-sm text-slate-600" x-show="isVoice(q) && voice && voice.score!==null"
+                     x-text="'Kemiripan '+(q.type==='surahvoice' ? 'ucapan ' : 'bacaan ')+(voice ? voice.score : 0)+'% (batas lulus '+passPct()+'%)'"></div>
+                <div class="text-sm text-slate-600" x-show="q.type==='surahvoice' && !voice">Dijawab dengan pilihan ganda</div>
+                <div class="text-sm text-slate-600" x-show="q.type==='voice' && voice && voice.score===null">Penilaian mandiri</div>
+                <div class="text-sm text-slate-600" x-show="isSurahQ(q)">
+                  <span x-text="'Ini adalah QS. '+q.surah.lat+' ayat '+q.ayah.n+' (Juz '+q.surah.juz+')'"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- surah mode: arabic name -->
+            <div x-show="isSurahQ(q)" class="rounded-2xl bg-white/80 border border-white p-4 flex items-center justify-between">
+              <div>
+                <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Surah ke-<span x-text="q.surah.n"></span></div>
+                <div class="font-bold text-emerald-950" x-text="q.surah.lat"></div>
+              </div>
+              <div class="font-arab text-3xl text-gold-600" dir="rtl" x-text="'سُورَةُ '+q.surah.ar"></div>
+            </div>
+
+            <!-- voice transcript -->
+            <div x-show="isVoice(q) && voice && voice.transcript" class="rounded-2xl bg-white/80 border border-white p-4">
+              <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider mb-1" x-text="q.type==='surahvoice' ? 'Yang terdengar dari ucapan Anda' : 'Bacaan Anda'"></div>
+              <p class="text-xl leading-[2.1] text-slate-700" :class="isLatinLang() ? 'font-sans text-left' : 'font-arab text-right'" :dir="isLatinLang() ? 'ltr' : 'rtl'" x-text="voice ? voice.transcript : ''"></p>
+              <p x-show="!lastCorrect && voice && voice.best" class="text-sm text-rose-600 font-semibold mt-1" x-text="voice && voice.best ? 'Terdengar lebih mirip: '+voice.best.lat+' ('+voice.best.pct+'%)' : ''"></p>
+            </div>
+
+            <!-- correct verse N+1 -->
+            <div x-show="!isSurahQ(q)" class="rounded-2xl bg-white border border-emerald-100 p-4">
+              <div class="flex items-center justify-between mb-1">
+                <div class="text-xs text-emerald-700 font-bold uppercase tracking-wider">Ayat berikutnya yang benar · Ayat <span x-text="q.next ? q.next.n : ''"></span></div>
+              </div>
+              <p class="font-arab text-2xl sm:text-3xl leading-[2.2] text-right" dir="rtl">
+                <template x-if="q.type==='voice' && voice && voice.flags">
+                  <span>
+                    <template x-for="(w,k) in (voice ? voice.words : [])" :key="k">
+                      <span class="transition-colors" :class="voice && voice.flags ? (voice.flags[k]===true ? 'text-emerald-700' : (voice.flags[k]===false ? 'text-rose-600' : 'text-emerald-950')) : 'text-emerald-950'" x-text="w+' '"></span>
+                    </template>
+                  </span>
+                </template>
+                <template x-if="!(q.type==='voice' && voice && voice.flags)">
+                  <span class="text-emerald-950" x-text="q.next ? q.next.text : ''"></span>
+                </template>
+                <span class="text-gold-600">﴿<span x-text="q.next ? toAr(q.next.n) : ''"></span>﴾</span>
+              </p>
+              <p x-show="q.type==='voice' && voice && voice.flags" class="text-[11px] text-slate-400 mt-1">Hijau = kata terdeteksi · Merah = belum terdeteksi</p>
+            </div>
+
+            <!-- listen buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button type="button" x-show="!isSurahQ(q)" @click="playAyah(q.next,'n')"
+                class="flex items-center gap-2 rounded-xl bg-emerald-900 text-gold-300 px-4 py-2.5 font-semibold text-sm hover:bg-emerald-800 transition-colors">
+                <span x-show="playingKey!=='n'"><i data-lucide="volume-2" class="w-4 h-4"></i></span>
+                <span x-show="playingKey==='n'"><i data-lucide="pause" class="w-4 h-4"></i></span>
+                Dengar murottal Syekh Mishary
+              </button>
+              <button type="button" x-show="isSurahQ(q)" @click="playAyah(q.ayah,'q')"
+                class="flex items-center gap-2 rounded-xl bg-emerald-900 text-gold-300 px-4 py-2.5 font-semibold text-sm hover:bg-emerald-800 transition-colors">
+                <i data-lucide="volume-2" class="w-4 h-4"></i> Dengar ayat ini lagi
+              </button>
+            </div>
+
+            <button type="button" @click="next()"
+              class="w-full on-gold rounded-2xl py-3.5 font-extrabold text-emerald-950 shadow-lg flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all"
+              style="background:linear-gradient(120deg,#D4AF37,#F59E0B)">
+              <span x-text="qIndex>=total ? 'Lihat Hasil' : 'Soal Berikutnya'"></span> <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+          </div>
+
+        </div>
+      </template>
+    </main>
+  </section>
+
+  <!-- ============================ RESULT ============================ -->
+  <section x-show="screen==='result'" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 translate-y-4" x-transition:enter-end="opacity-100 translate-y-0">
+    <header class="hero relative overflow-hidden text-white">
+      <div class="relative z-10 max-w-2xl mx-auto px-5 pt-10 pb-24 text-center">
+        <div class="text-xs uppercase tracking-[.3em] text-gold-300 font-bold" x-text="stoppedEarly ? 'Kuis Dihentikan' : 'Kuis Selesai'"></div>
+        <h2 class="text-2xl font-extrabold mt-1">Tahfidz 28-30</h2>
+      </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 -mt-16 relative z-20 space-y-5">
+      <div class="glass rounded-3xl border border-white shadow-2xl p-6 text-center anim-pop">
+        <div class="relative w-44 h-44 mx-auto">
+          <svg viewBox="0 0 160 160" class="w-44 h-44 -rotate-90">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="#D1FAE5" stroke-width="14"/>
+            <circle cx="80" cy="80" r="70" fill="none" stroke="url(#gg)" stroke-width="14" stroke-linecap="round"
+                    stroke-dasharray="439.82" :stroke-dashoffset="439.82*(1-animPct/100)"/>
+            <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#D4AF37"/></linearGradient></defs>
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <div class="text-5xl font-extrabold text-emerald-900"><span x-text="animPct"></span><span class="text-2xl">%</span></div>
+            <div class="text-xs text-slate-500 font-semibold">akurasi</div>
+          </div>
+        </div>
+
+        <div class="mt-5">
+          <div class="font-arab text-5xl gold-text leading-[1.6]" dir="rtl" x-text="rating().ar"></div>
+          <div class="text-xl font-extrabold text-emerald-900" x-text="rating().lat"></div>
+          <p class="text-sm text-slate-500 mt-1 max-w-sm mx-auto" x-text="rating().msg"></p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
+          <div class="rounded-2xl bg-white border border-slate-100 p-3"><div class="text-2xl font-extrabold text-emerald-900" x-text="records.length"></div><div class="text-[11px] text-slate-500 font-semibold">Total Terjawab</div></div>
+          <div class="rounded-2xl bg-emerald-50 border border-emerald-100 p-3"><div class="text-2xl font-extrabold text-emerald-600" x-text="correctCount"></div><div class="text-[11px] text-slate-500 font-semibold">Benar</div></div>
+          <div class="rounded-2xl bg-rose-50 border border-rose-100 p-3"><div class="text-2xl font-extrabold text-rose-500" x-text="wrongCount"></div><div class="text-[11px] text-slate-500 font-semibold">Salah</div></div>
+          <div class="rounded-2xl bg-amber-50 border border-amber-100 p-3"><div class="text-2xl font-extrabold text-gold-600" x-text="finalPct()+'%'"></div><div class="text-[11px] text-slate-500 font-semibold">Persentase</div></div>
+        </div>
+
+        <p x-show="records.some(r => r.tries > 1)" class="mt-4 text-sm text-slate-500">
+          Benar pada percobaan pertama: <b class="text-slate-700" x-text="records.filter(r => r.ok && (r.tries||0) <= 1).length"></b> dari <span x-text="records.length"></span> soal
+        </p>
+        <p x-show="skips.length" class="mt-4 text-sm text-slate-500">
+          Soal dilewati: <b class="text-slate-700" x-text="skips.length"></b> (tidak dihitung dalam skor)
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 mt-6">
+          <button @click="start()" class="on-gold rounded-2xl py-3.5 font-extrabold text-emerald-950 shadow-lg flex items-center justify-center gap-2 hover:-translate-y-0.5 transition-all" style="background:linear-gradient(120deg,#D4AF37,#F59E0B)">
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i> Main Lagi
+          </button>
+          <button @click="resetToHome()" class="rounded-2xl py-3.5 font-bold text-emerald-900 bg-white border-2 border-emerald-200 hover:border-emerald-400 flex items-center justify-center gap-2 transition-colors">
+            <i data-lucide="settings-2" class="w-4 h-4"></i> Pengaturan Ulang
+          </button>
+        </div>
+      </div>
+
+      <div x-show="missedSurahs().length" class="glass rounded-3xl border border-white shadow-lg p-5 sm:p-6">
+        <h3 class="font-bold text-emerald-900 mb-1 flex items-center gap-2"><i data-lucide="repeat" class="w-5 h-5 text-gold-600"></i> Surah yang Perlu Diulang</h3>
+        <p class="text-xs text-slate-500 mb-3">Surah dengan jawaban salah pada sesi ini.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <template x-for="m in missedSurahs()" :key="m.n">
+            <span class="inline-flex items-center gap-2 rounded-full bg-rose-50 border border-rose-100 px-3 py-1.5 text-sm">
+              <b class="text-rose-700" x-text="m.s.lat"></b>
+              <span class="text-xs text-rose-500" x-text="m.w+' salah'+(m.c ? ' · '+m.c+' benar' : '')"></span>
+            </span>
+          </template>
+        </div>
+        <button type="button" @click="startFocus()" class="w-full rounded-2xl py-3.5 font-extrabold text-white bg-gradient-to-br from-emerald-500 to-emerald-800 shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="target" class="w-5 h-5"></i> Latih Surah yang Salah (<span x-text="missedSurahs().length"></span> surah)
+        </button>
+      </div>
+
+      <div x-show="records.length" class="glass rounded-3xl border border-white shadow-lg p-5 sm:p-6">
+        <h3 class="font-bold text-emerald-900 mb-3 flex items-center gap-2"><i data-lucide="list-checks" class="w-5 h-5 text-gold-600"></i> Tinjauan Jawaban</h3>
+        <ul class="divide-y divide-slate-100 max-h-80 overflow-auto scroll-thin">
+          <template x-for="(r,i) in records" :key="i">
+            <li class="py-2.5 flex items-center gap-3 text-sm">
+              <span class="w-6 h-6 rounded-full flex items-center justify-center shrink-0" :class="r.ok ? 'bg-emerald-100 text-emerald-700' : 'bg-rose-100 text-rose-600'">
+                <span x-show="r.ok"><i data-lucide="check" class="w-3.5 h-3.5"></i></span>
+                <span x-show="!r.ok"><i data-lucide="x" class="w-3.5 h-3.5"></i></span>
+              </span>
+              <span class="text-slate-400 w-6 text-right" x-text="(i+1)+'.'"></span>
+              <span class="flex-1 font-medium text-slate-700" x-text="r.ref"></span>
+              <span class="text-xs text-slate-400" x-text="r.note"></span>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </main>
+  </section>
+</div>
+
+<script>
+/* ===================================================================
+   DATA — Surah Juz 28, 29, 30 (nomor, nama Latin, nama Arab)
+   =================================================================== */
+const STATS_KEY = 'tahfidz2830-stats';
+const AYAT = {   // jumlah ayat (riwayat Hafs); total Juz 28 = 137, Juz 29 = 431, Juz 30 = 564
+  58:22,59:24,60:13,61:14,62:11,63:11,64:18,65:12,66:12,
+  67:30,68:52,69:52,70:44,71:28,72:28,73:20,74:56,75:40,76:31,77:50,
+  78:40,79:46,80:42,81:29,82:19,83:36,84:25,85:22,86:17,87:19,88:26,89:30,90:20,91:15,92:21,93:11,94:8,95:8,
+  96:19,97:5,98:8,99:8,100:11,101:11,102:8,103:3,104:9,105:5,106:4,107:7,108:3,109:6,110:3,111:5,112:4,113:5,114:6
+};
+const SURAHS = [
+  // Juz 28
+  {n:58,lat:"Al-Mujādilah",ar:"المجادلة"},{n:59,lat:"Al-Ḥashr",ar:"الحشر"},{n:60,lat:"Al-Mumtaḥanah",ar:"الممتحنة"},
+  {n:61,lat:"Aṣ-Ṣaff",ar:"الصف"},{n:62,lat:"Al-Jumu'ah",ar:"الجمعة"},{n:63,lat:"Al-Munāfiqūn",ar:"المنافقون"},
+  {n:64,lat:"At-Taghābun",ar:"التغابن"},{n:65,lat:"Aṭ-Ṭalāq",ar:"الطلاق"},{n:66,lat:"At-Taḥrīm",ar:"التحريم"},
+  // Juz 29
+  {n:67,lat:"Al-Mulk",ar:"الملك"},{n:68,lat:"Al-Qalam",ar:"القلم"},{n:69,lat:"Al-Ḥāqqah",ar:"الحاقة"},
+  {n:70,lat:"Al-Ma'ārij",ar:"المعارج"},{n:71,lat:"Nūḥ",ar:"نوح"},{n:72,lat:"Al-Jinn",ar:"الجن"},
+  {n:73,lat:"Al-Muzzammil",ar:"المزمل"},{n:74,lat:"Al-Muddaththir",ar:"المدثر"},{n:75,lat:"Al-Qiyāmah",ar:"القيامة"},
+  {n:76,lat:"Al-Insān",ar:"الإنسان"},{n:77,lat:"Al-Mursalāt",ar:"المرسلات"},
+  // Juz 30
+  {n:78,lat:"An-Naba'",ar:"النبأ"},{n:79,lat:"An-Nāzi'āt",ar:"النازعات"},{n:80,lat:"'Abasa",ar:"عبس"},
+  {n:81,lat:"At-Takwīr",ar:"التكوير"},{n:82,lat:"Al-Infiṭār",ar:"الانفطار"},{n:83,lat:"Al-Muṭaffifīn",ar:"المطففين"},
+  {n:84,lat:"Al-Inshiqāq",ar:"الانشقاق"},{n:85,lat:"Al-Burūj",ar:"البروج"},{n:86,lat:"Aṭ-Ṭāriq",ar:"الطارق"},
+  {n:87,lat:"Al-A'lā",ar:"الأعلى"},{n:88,lat:"Al-Ghāshiyah",ar:"الغاشية"},{n:89,lat:"Al-Fajr",ar:"الفجر"},
+  {n:90,lat:"Al-Balad",ar:"البلد"},{n:91,lat:"Ash-Shams",ar:"الشمس"},{n:92,lat:"Al-Layl",ar:"الليل"},
+  {n:93,lat:"Aḍ-Ḍuḥā",ar:"الضحى"},{n:94,lat:"Ash-Sharḥ",ar:"الشرح"},{n:95,lat:"At-Tīn",ar:"التين"},
+  {n:96,lat:"Al-'Alaq",ar:"العلق"},{n:97,lat:"Al-Qadr",ar:"القدر"},{n:98,lat:"Al-Bayyinah",ar:"البينة"},
+  {n:99,lat:"Az-Zalzalah",ar:"الزلزلة"},{n:100,lat:"Al-'Ādiyāt",ar:"العاديات"},{n:101,lat:"Al-Qāri'ah",ar:"القارعة"},
+  {n:102,lat:"At-Takāthur",ar:"التكاثر"},{n:103,lat:"Al-'Aṣr",ar:"العصر"},{n:104,lat:"Al-Humazah",ar:"الهمزة"},
+  {n:105,lat:"Al-Fīl",ar:"الفيل"},{n:106,lat:"Quraysh",ar:"قريش"},{n:107,lat:"Al-Mā'ūn",ar:"الماعون"},
+  {n:108,lat:"Al-Kawthar",ar:"الكوثر"},{n:109,lat:"Al-Kāfirūn",ar:"الكافرون"},{n:110,lat:"An-Naṣr",ar:"النصر"},
+  {n:111,lat:"Al-Masad",ar:"المسد"},{n:112,lat:"Al-Ikhlāṣ",ar:"الإخلاص"},{n:113,lat:"Al-Falaq",ar:"الفلق"},
+  {n:114,lat:"An-Nās",ar:"الناس"}
+].map(s => ({...s, juz: s.n <= 66 ? 28 : (s.n <= 77 ? 29 : 30), ayat: AYAT[s.n]}));
+
+const PASS = 65;                // nilai dasar (ambang sebenarnya = PASS_TABLE + pengaturan "Ketepatan")
+const PASS_TABLE = {            // ambang lulus (%) per tingkat ketepatan
+  ayah: { loose:55, normal:65, strict:78 },   // Sambung Ayat — Suara
+  name: { loose:60, normal:70, strict:82 }    // Tebak Surah — Suara
+};
+const NAME_MARGIN = 0.03;       // toleransi: nama target boleh kalah setipis ini dari nama lain
+const SPEECH_SILENCE_MS = 2800; // jeda hening sebelum rekaman berhenti otomatis (sambung ayat)
+const NAME_SILENCE_MS = 1600;   // idem untuk tebak surah (jawaban pendek)
+
+/* ===================================================================
+   UTIL — Normalisasi Arab & kemiripan
+   =================================================================== */
+function norm(s){
+  return (s || '')
+    // harakat, tanwin, tanda waqf/qur'ani, tatwil, kontrol arah
+    .replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u08D3-\u08FF\u0640\u200B-\u200F\u202A-\u202E\uFD3E\uFD3F]/g, '')
+    .replace(/[أإآٱ]/g, 'ا')
+    .replace(/ى/g, 'ي').replace(/ی/g, 'ي')
+    .replace(/ة/g, 'ه')
+    .replace(/ؤ/g, 'و').replace(/ئ/g, 'ي')
+    .replace(/ک/g, 'ك')
+    .replace(/[^\u0621-\u063A\u0641-\u064A\s]/g, ' ')
+    .replace(/\s+/g, ' ').trim();
+}
+function lev(a, b){
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  let prev = Array.from({length: b.length + 1}, (_, i) => i), cur = new Array(b.length + 1);
+  for (let i = 1; i <= a.length; i++){
+    cur[0] = i;
+    for (let j = 1; j <= b.length; j++){
+      const c = a[i-1] === b[j-1] ? 0 : 1;
+      cur[j] = Math.min(prev[j] + 1, cur[j-1] + 1, prev[j-1] + c);
+    }
+    [prev, cur] = [cur, prev];
+  }
+  return prev[b.length];
+}
+function sim(a, b){
+  const m = Math.max(a.length, b.length);
+  return m ? 1 - lev(a, b) / m : 0;
+}
+/* Bandingkan transkripsi dengan ayat target (non-strict) */
+function compareArabic(transcript, target){
+  const tWordsRaw = target.split(/\s+/).filter(Boolean);
+  const tNorm = tWordsRaw.map(norm);
+  const sWords = norm(transcript).split(' ').filter(Boolean);
+  const A = norm(transcript).replace(/\s/g, '');
+  const B = tNorm.join('');
+  const charSim = (A && B) ? sim(A, B) : 0;
+
+  // Fuzzy keyword matching per kata
+  const used = new Array(sWords.length).fill(false);
+  const flags = tNorm.map(() => null);
+  let matched = 0, counted = 0;
+  tNorm.forEach((w, k) => {
+    if (!w) return;
+    counted++;
+    let best = -1, bestS = 0;
+    sWords.forEach((sw, idx) => {
+      if (used[idx]) return;
+      const sc = sim(w, sw);
+      if (sc > bestS) { bestS = sc; best = idx; }
+    });
+    const need = w.length <= 2 ? 1 : 0.72;
+    if (best >= 0 && bestS >= need) { used[best] = true; matched++; flags[k] = true; }
+    else flags[k] = false;
+  });
+  const wordSim = counted ? matched / counted : 0;
+  const score = Math.round(Math.max(charSim, wordSim) * 100);
+  return { score, flags, words: tWordsRaw, charSim, wordSim };
+}
+
+const rand = arr => arr[Math.floor(Math.random() * arr.length)];
+const shuffle = arr => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+/* ===================================================================
+   DATA LAYER — Alquran.cloud (teks Uthmani + audio ar.alafasy)
+   =================================================================== */
+const surahCache = new Map();
+async function loadSurah(n){
+  if (surahCache.has(n)) return surahCache.get(n);
+  let lastErr;
+  for (let t = 0; t < 3; t++){
+    try {
+      const r = await fetch(`https://api.alquran.cloud/v1/surah/${n}/editions/quran-uthmani,ar.alafasy`);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const j = await r.json();
+      const te = j.data[0], au = j.data[1];
+      const list = te.ayahs.map((a, k) => {
+        let text = a.text;
+        // buang basmalah yang menempel di ayat 1 (selain Al-Fatihah & At-Taubah)
+        if (a.numberInSurah === 1 && n !== 1 && n !== 9){
+          const w = text.split(/\s+/);
+          if (norm(w[0]) === 'بسم') text = w.slice(4).join(' ');
+        }
+        const ad = au.ayahs[k];
+        const cdn = `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${a.number}.mp3`;
+        return {
+          n: a.numberInSurah,
+          text: text.trim(),
+          audio: ad.audio || cdn,
+          audio2: (ad.audio && ad.audio !== cdn) ? cdn : ((ad.audioSecondary || [])[0] || null),
+          global: a.number
+        };
+      });
+      surahCache.set(n, list);
+      return list;
+    } catch (e) { lastErr = e; await sleep(700 * (t + 1)); }
+  }
+  throw lastErr;
+}
+
+
+/* ===================================================================
+   AUDIO ENGINE
+   Murottal diputar lewat Web Audio dengan PENYERAGAMAN LEVEL antar ayat.
+   Yang diseragamkan hanya level relatif rekaman; besar-kecil suara akhir
+   TETAP ditentukan volume sistem perangkat (tidak ada volume master di aplikasi).
+   =================================================================== */
+const VOL = {
+  TARGET_DB: -20,     // level rata-rata (RMS, dBFS) yang dituju setiap ayat
+  MAX_BOOST_DB: 12,   // penguatan maksimum untuk rekaman yang terlalu pelan
+  MAX_CUT_DB: -12,    // pelemahan maksimum untuk rekaman yang terlalu keras
+  GATE_DB: -50,       // bagian di bawah level ini dianggap hening & tidak dihitung
+  PEAK_LIMIT_DB: 2    // puncak sesudah penguatan dijaga <= +2 dBFS; sisanya ditangani limiter
+};
+const AC = window.AudioContext || window.webkitAudioContext;
+const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+// iOS lama: Web Audio ikut tombol senyap & jalur audio sering tertukar -> pakai <audio> biasa
+const CAN_NORMALIZE = !!AC && (!IS_IOS || !!navigator.audioSession);
+
+const audioCache = new Map();
+let curEntry = null;   // entri yang diputar lewat elemen <audio> (jalur cadangan)
+let curSrc = null;     // sumber Web Audio yang sedang diputar
+let actx = null, limiter = null, APP = null;
+
+// Safari/iOS 16.4+: paksa kategori "playback" agar murottal memakai volume MEDIA, bukan volume panggilan
+function setAudioSession(type){
+  try { if (navigator.audioSession && navigator.audioSession.type !== type) navigator.audioSession.type = type; } catch(e){}
+}
+function getCtx(){
+  if (!actx && AC){
+    try { actx = new AC({ latencyHint:'interactive' }); } catch(e){ try { actx = new AC(); } catch(_){} }
+  }
+  return actx;
+}
+function getLimiter(){
+  const c = getCtx(); if (!c) return null;
+  if (!limiter){
+    limiter = c.createDynamicsCompressor();
+    limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20;
+    limiter.attack.value = 0.003; limiter.release.value = 0.12;
+    limiter.connect(c.destination);
+  }
+  return limiter;
+}
+const db2lin = d => Math.pow(10, d / 20);
+const lin2db = x => 20 * Math.log10(x);
+
+/* Ukur level rata-rata (RMS, bagian yang tidak hening) dan puncak, lalu hitung gain penyeragam */
+function analyzeLoudness(buf){
+  const nCh = buf.numberOfChannels, len = buf.length, ch = [];
+  for (let c = 0; c < nCh; c++) ch.push(buf.getChannelData(c));
+  const gate = db2lin(VOL.GATE_DB);
+  let sum = 0, cnt = 0, peak = 0;
+  for (let i = 0; i < len; i++){
+    let v = 0; for (let c = 0; c < nCh; c++) v += ch[c][i];
+    v /= nCh;
+    const a = v < 0 ? -v : v;
+    if (a > peak) peak = a;
+    if (a > gate){ sum += v * v; cnt++; }
+  }
+  if (!cnt || peak <= 0) return { rmsDb:-Infinity, peakDb:-Infinity, gain:1, gainDb:0 };
+  const rmsDb = lin2db(Math.sqrt(sum / cnt)), peakDb = lin2db(peak);
+  let gDb = Math.min(VOL.MAX_BOOST_DB, Math.max(VOL.MAX_CUT_DB, VOL.TARGET_DB - rmsDb));
+  if (peakDb + gDb > VOL.PEAK_LIMIT_DB) gDb = VOL.PEAK_LIMIT_DB - peakDb;
+  return { rmsDb, peakDb, gain: db2lin(gDb), gainDb: gDb };
+}
+async function fetchDecode(url){
+  const c = getCtx(); if (!c) throw new Error('no-audiocontext');
+  const ctl = new AbortController(), tm = setTimeout(() => ctl.abort(), 20000);
+  try {
+    const r = await fetch(url, { mode:'cors', signal: ctl.signal });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const ab = await r.arrayBuffer();
+    return await new Promise((res, rej) => { const p = c.decodeAudioData(ab, res, rej); if (p && p.catch) p.catch(rej); });
+  } finally { clearTimeout(tm); }
+}
+// Elemen <audio> biasa (jalur cadangan: CORS gagal, decode gagal, atau iOS lama). Volume tidak diubah -> ikut sistem.
+function ensureEl(e){
+  if (e.el) return e.el;
+  const el = new Audio(); el.preload = 'auto';
+  el.addEventListener('ended', () => { if (curEntry === e && APP) APP.playingKey = null; });
+  el.addEventListener('error', () => {
+    if (e.alt && !e.tried){
+      e.tried = true; el.src = e.alt; el.load();
+      if (curEntry === e && APP && APP.playingKey) el.play().catch(() => {});
+    } else if (curEntry === e && APP && APP.playingKey){
+      APP.playingKey = null; APP.showToast('Audio gagal dimuat. Periksa koneksi internet.');
+    }
+  });
+  el.src = e.url; e.el = el;
+  return el;
+}
+function makeEntry(a, normalize){
+  const e = { url:a.audio, alt:a.audio2 || null, mode:'pending', buf:null, gain:1, gainDb:0, rmsDb:null, el:null, tried:false, ready:null };
+  e.ready = (async () => {
+    if (normalize && CAN_NORMALIZE){
+      for (const u of [e.url, e.alt]){
+        if (!u) continue;
+        try {
+          const buf = await fetchDecode(u), m = analyzeLoudness(buf);
+          e.buf = buf; e.gain = m.gain; e.gainDb = m.gainDb; e.rmsDb = m.rmsDb; e.mode = 'web';
+          return;
+        } catch(_){}
+      }
+    }
+    e.mode = 'el'; ensureEl(e);
+  })();
+  return e;
+}
+function clearAudioCache(){
+  if (curSrc){ try { curSrc.stop(); } catch(_){} curSrc = null; }
+  audioCache.forEach(e => { try { if (e.el){ e.el.pause(); e.el.removeAttribute('src'); e.el.load(); } } catch(_){} });
+  audioCache.clear(); curEntry = null;
+}
+async function waitReady(e, ms){
+  await Promise.race([e.ready, sleep(ms)]);
+  if (e.mode !== 'el' || !e.el) return;
+  const el = e.el;
+  if (IS_IOS || el.readyState >= 3) return;   // iOS tidak mem-preload; jangan menunggu
+  await new Promise(resolve => {
+    let done = false, t;
+    const fin = () => { if (done) return; done = true; clearTimeout(t); el.removeEventListener('canplay', fin); el.removeEventListener('error', fin); resolve(); };
+    t = setTimeout(fin, ms);
+    el.addEventListener('canplay', fin); el.addEventListener('error', fin);
+  });
+}
+
+/* Nada umpan balik (benar / salah) — memakai AudioContext yang sama */
+function primeTone(){
+  try { const c = getCtx(); if (c && c.state !== 'running') c.resume(); } catch(e){}
+}
+function playTone(ok){
+  try {
+    const c = getCtx(); if (!c) return;
+    if (c.state !== 'running') c.resume();
+    const notes = ok ? [660, 880, 1100] : [330, 220];
+    const t = c.currentTime + 0.02;
+    notes.forEach((f, i) => {
+      const o = c.createOscillator(), g = c.createGain(), st = t + i * 0.15;
+      o.type = ok ? 'sine' : 'triangle'; o.frequency.value = f;
+      g.gain.setValueAtTime(0.0001, st);
+      g.gain.exponentialRampToValueAtTime(0.2, st + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, st + 0.14);
+      o.connect(g); g.connect(c.destination); o.start(st); o.stop(st + 0.16);
+    });
+  } catch(e){}
+}
+
+/* ===================================================================
+   PENILAIAN NAMA SURAH (Tebak Surah — Suara)
+   Cocokkan ucapan dengan nama Arab DAN Latin (transliterasi Indonesia/Inggris),
+   dengan/tanpa kata sandang (Al-/An-/Ash-…) dan awalan "surah/surat".
+   =================================================================== */
+const ARTICLES = new Set(['al','an','ar','as','ash','asy','ad','adh','at','ath','az','azh']);
+const AR_STOP  = new Set(['سوره','سورت','ايه','ايات']);
+const LAT_STOP = new Set(['surah','surat','sura','suroh','ayat','ayah']);
+const SURAH_ALIASES = {
+  67:{ ar:['تبارك'], lat:['tabarak','tabaarok'] },
+  68:{ ar:[],        lat:['nun','nuun'] },
+  76:{ ar:['الدهر'], lat:['dahr','ad dahr'] },
+  93:{ ar:[],        lat:['dhuha','duha','adh dhuha'] },
+  94:{ ar:['الم نشرح'], lat:['insyirah','al insyirah','alam nasyrah','alam nashrah'] },
+  111:{ ar:['تبت','اللهب'], lat:['lahab','al lahab','tabbat'] }
+};
+function normLatin(s){
+  return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[ʻʼ’‘`´']/g, '').replace(/[^a-z0-9\s-]/g, ' ').replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
+}
+// kunci fonetik kasar: menyamakan ejaan seperti Ikhlas/Ikhlash, Kautsar/Kawthar, Quraisy/Quraysh
+function phonTok(w){
+  return w.replace(/kh/g,'h').replace(/gh/g,'g').replace(/sh/g,'s').replace(/sy/g,'s').replace(/ts/g,'s').replace(/th/g,'s')
+    .replace(/dh/g,'d').replace(/dz/g,'d').replace(/aw/g,'au').replace(/ay/g,'ai')
+    .replace(/q/g,'k').replace(/z/g,'d').replace(/c/g,'k')
+    .replace(/aa/g,'a').replace(/ii/g,'i').replace(/uu/g,'u').replace(/ee/g,'i').replace(/oo/g,'u').replace(/ou/g,'u')
+    .replace(/o/g,'u').replace(/e/g,'i')
+    .replace(/(.)\1+/g,'$1').replace(/h$/,'');
+}
+const SURAH_FORMS = new Map();
+function surahForms(s){
+  let f = SURAH_FORMS.get(s.n); if (f) return f;
+  const ar = new Set(), lat = new Set();
+  const base = norm(s.ar);
+  ar.add(base); if (base.startsWith('ال') && base.length > 4) ar.add(base.slice(2));
+  const raw = normLatin(s.lat).split(' ').filter(Boolean), ph = raw.map(phonTok);
+  lat.add(ph.join(''));
+  if (raw.length > 1 && ARTICLES.has(raw[0])) lat.add(ph.slice(1).join(''));
+  const al = SURAH_ALIASES[s.n];
+  if (al){
+    (al.ar || []).forEach(x => { const n = norm(x); if (n) ar.add(n); });
+    (al.lat || []).forEach(x => { const n = normLatin(x).split(' ').filter(Boolean).map(phonTok).join(''); if (n) lat.add(n); });
+  }
+  f = { ar: [...ar], lat: [...lat] };
+  SURAH_FORMS.set(s.n, f); return f;
+}
+function windowsOf(tokens, maxN){
+  const out = [];
+  for (let i = 0; i < tokens.length; i++){
+    let acc = '';
+    for (let n = 0; n < (maxN || 3) && i + n < tokens.length; n++){ acc += tokens[i + n]; out.push(acc); }
+  }
+  if (tokens.length > 3 && tokens.length <= 6) out.push(tokens.join(''));
+  return out;
+}
+function surahInitial(s){
+  const toks = normLatin(s.lat).split(' ').filter(Boolean);
+  const rest = (toks.length > 1 && ARTICLES.has(toks[0])) ? toks.slice(1) : toks;
+  const a = norm(s.ar);
+  return { lat: (rest[0] || '?').charAt(0).toUpperCase(), ar: (a.startsWith('ال') && a.length > 3 ? a.slice(2) : a).charAt(0) };
+}
+/* texts: hipotesis utama + alternatif pengenal suara. pool: surah yang menjadi pilihan (Juz terpilih). */
+function scoreSurahName(texts, target, pool){
+  const winAr = new Set(), winLat = new Set();
+  for (const raw of texts){
+    windowsOf(norm(raw).split(' ').filter(t => t && !AR_STOP.has(t))).forEach(w => winAr.add(w));
+    windowsOf(normLatin(raw).split(' ').filter(t => t && !LAT_STOP.has(t)).map(phonTok).filter(Boolean)).forEach(w => winLat.add(w));
+  }
+  const list = pool.some(s => s.n === target.n) ? pool : pool.concat([target]);
+  let tScore = 0, other = null, otherScore = 0;
+  for (const s of list){
+    const f = surahForms(s); let best = 0;
+    for (const w of winAr) for (const x of f.ar){ const v = sim(w, x); if (v > best) best = v; }
+    for (const w of winLat) for (const x of f.lat){ const v = sim(w, x); if (v > best) best = v; }
+    if (s.n === target.n) tScore = best;
+    else if (best > otherScore){ otherScore = best; other = s; }
+  }
+  return { target: tScore, other, otherScore };
+}
+
+/* ===================================================================
+   APP (Alpine)
+   =================================================================== */
+function tahfiz(){
+  return {
+    PASS,
+    screen: 'home',
+    // wizard halaman utama (4 langkah)
+    step: 1, maxStep: 1, stepDir: 1,
+    steps: [ { n:1, t:'Kuis' }, { n:2, t:'Juz' }, { n:3, t:'Surah' }, { n:4, t:'Soal & Audio' } ],
+    dark: false, themeStored: false,
+    modes: [
+      { id:'surah',      no:1, icon:'list-checks', title:'Tebak Nama Surah', desc:'Dengar & baca satu ayat, lalu pilih nama surahnya (pilihan A–D Latin).' },
+      { id:'surahvoice', no:2, icon:'mic',         title:'Tebak Surah — Suara / Vokal', desc:'Dengar satu ayat, lalu sebutkan nama surahnya lewat mikrofon.' },
+      { id:'mcq',        no:3, icon:'book-open',   title:'Sambung Ayat — Pilihan Ganda', desc:'Pilih ayat lanjutan yang benar dari empat pilihan teks Arab (A–D).' },
+      { id:'voice',      no:4, icon:'mic',         title:'Sambung Ayat — Suara / Vokal', desc:'Lantunkan ayat berikutnya lewat mikrofon, dinilai otomatis.' }
+    ],    passTable: PASS_TABLE,
+    juzOptions: [
+      { id:'28', label:'Juz 28', ar:'الجزء ٢٨', sub:'Al-Mujādilah – At-Taḥrīm' },
+      { id:'29', label:'Juz 29', ar:'الجزء ٢٩', sub:'Al-Mulk – Al-Mursalāt' },
+      { id:'30', label:'Juz 30', ar:'الجزء ٣٠', sub:'An-Naba\' – An-Nās' },
+      { id:'all', label:'Semua Juz 28–30', ar:'الأجزاء ٢٨–٣٠', sub:'Gabungan 3 juz (surah 58–114)' }
+    ],
+    cfg: { mode:'surah', juz:'all', count:10, autoplay:true, showRef:false, tries:3, normalize:true, strict:'normal', nameLang:'ar-SA', off:[], dist:'surah', sort:'mushaf' },
+
+    // quiz state
+    sessionId: 0, total: 10, qIndex: 0, q: null, loading: false, loadError: '',
+    answered: false, selected: null, lastCorrect: false,
+    correctCount: 0, wrongCount: 0, records: [], skips: [], used: new Set(), usedBy: {}, prefetched: null,
+    focusSet: null,              // sesi "latih surah yang salah": mengganti pilihan surah sementara
+    search: '', stats: {}, confirmReset: false,
+    presets: [
+      { id:'all',  l:'Pilih Semua', icon:'check-check' },
+      { id:'none', l:'Kosongkan',   icon:'eraser' }
+    ],    stoppedEarly: false, animPct: 0, toast: '',
+
+    // audio (elemen audio disimpan di luar state reaktif: audioCache / curEntry)
+    playingKey: null, playToken: 0, micEndedAt: 0,
+    choiceMode: false,           // tebak surah vokal: soal dijawab dengan pilihan ganda
+    altTexts: [], recLang: 'ar-SA',
+
+    // notifikasi tengah layar (benar / salah / peringatan)
+    flash: { show:false, kind:'ok', title:'', sub:'' }, _flashT: null,
+
+    // voice state
+    speechSupported: false, listening: false, processing: false, finalText: '', interim: '', micError: '',
+    voice: null, selfMode: false, rec: null, recId: 0, recErr: null, recDone: false,
+    silenceTimer: null, stopWatch: null,
+    attempts: 0, missed: false,   // jumlah bacaan yang sudah dinilai; true = bacaan terakhir belum tepat & boleh diulang
+
+    /* ------------------- init ------------------- */
+    init(){
+      APP = this;
+      this.initTheme();
+      if (window.NativeBridge && NativeBridge.native){          // sinkronkan warna ikon status bar / navigation bar
+        const sync = () => NativeBridge.syncBars(this.screen, this.dark);
+        this.$watch('screen', sync); this.$watch('dark', sync); sync();
+      }
+      this.speechSupported = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+      try {
+        const saved = JSON.parse(localStorage.getItem('tahfiz2830') || 'null');
+        if (saved){ this.cfg = Object.assign(this.cfg, saved); this.maxStep = 4; }   // pengguna lama: semua langkah bisa dilompati lewat penunjuk langkah
+      } catch(e){}
+      if (!Array.isArray(this.cfg.off)) this.cfg.off = [];
+      this.cfg.off = this.cfg.off.filter(n => AYAT[n]);
+      if (!['surah','ayat'].includes(this.cfg.dist)) this.cfg.dist = 'surah';
+      if (!['mushaf','weak','short'].includes(this.cfg.sort)) this.cfg.sort = 'mushaf';
+      try { const st = JSON.parse(localStorage.getItem(STATS_KEY) || 'null'); if (st && typeof st === 'object') this.stats = st; } catch(e){}
+      this.$watch('cfg', v => { try { localStorage.setItem('tahfiz2830', JSON.stringify(v)); } catch(e){} }, { deep: true });
+
+      // Lucide: render ikon otomatis setiap DOM berubah
+      let t;
+      const run = () => { if (window.lucide && document.querySelector('i[data-lucide]')) lucide.createIcons(); };
+      new MutationObserver(() => { clearTimeout(t); t = setTimeout(run, 25); }).observe(document.body, { childList:true, subtree:true });
+      run(); window.addEventListener('load', run);
+    },
+
+    /* ------------------- helpers ------------------- */
+    /* ------------------- pilihan surah ------------------- */
+    get juzPool(){ return SURAHS.filter(s => this.cfg.juz === 'all' || s.juz === +this.cfg.juz); },   // semua surah pada Juz terpilih
+    get pool(){                                                                                       // surah yang bertanda ✓ (sumber soal)
+      if (this.focusSet) return SURAHS.filter(s => this.focusSet.includes(s.n));
+      const off = this.cfg.off || [];
+      return this.juzPool.filter(s => !off.includes(s.n));
+    },
+    get selCount(){ return this.pool.length; },
+    get selAyat(){ return this.pool.reduce((a, s) => a + s.ayat, 0); },
+    get availQ(){ const needNext = this.cfg.mode === 'mcq' || this.cfg.mode === 'voice'; return this.pool.reduce((a, s) => a + (needNext ? s.ayat - 1 : s.ayat), 0); },
+    isOn(n){ return !(this.cfg.off || []).includes(n); },
+    setOn(nums, on){
+      const off = new Set(this.cfg.off || []);
+      nums.forEach(n => on ? off.delete(n) : off.add(n));
+      this.cfg.off = [...off].sort((a, b) => a - b);
+    },
+    toggleSurah(n){ this.setOn([n], !this.isOn(n)); },
+    setSelection(list){        // hanya mengubah surah pada Juz terpilih; pilihan Juz lain tetap utuh
+      const keep = new Set(list), jp = new Set(this.juzPool.map(s => s.n));
+      const off = (this.cfg.off || []).filter(n => !jp.has(n));
+      this.juzPool.forEach(s => { if (!keep.has(s.n)) off.push(s.n); });
+      this.cfg.off = off.sort((a, b) => a - b);
+    },
+    presetIds(id){ return id === 'all' ? this.juzPool.map(s => s.n) : []; },
+    applyPreset(id){ this.setSelection(this.presetIds(id)); },
+    groupState(juz){
+      const it = this.juzPool.filter(s => s.juz === juz); if (!it.length) return 'none';
+      const on = it.filter(s => this.isOn(s.n)).length;
+      return on === it.length ? 'all' : (on === 0 ? 'none' : 'some');
+    },
+    groupCount(juz){ const it = this.juzPool.filter(s => s.juz === juz); return it.filter(s => this.isOn(s.n)).length + '/' + it.length; },
+    toggleGroup(juz){ this.setOn(this.juzPool.filter(s => s.juz === juz).map(s => s.n), this.groupState(juz) !== 'all'); },
+    juzMeta(id){
+      const it = SURAHS.filter(s => id === 'all' || s.juz === +id), off = this.cfg.off || [];
+      const on = it.filter(s => !off.includes(s.n));
+      return on.length + ' dari ' + it.length + ' surah dipilih · ' + on.reduce((a, s) => a + s.ayat, 0) + ' ayat';
+    },
+    surahMatch(s, term){      // pencarian toleran: ejaan Indonesia/Inggris, nama Arab, nomor
+      const t = (term || '').trim().toLowerCase(); if (!t) return true;
+      if (/^\d+$/.test(t)) return String(s.n) === t;
+      if (/[\u0600-\u06FF]/.test(t)){ const a = norm(t); return !!a && (norm(s.ar).includes(a) || surahForms(s).ar.some(f => f.includes(a))); }
+      const words = normLatin(t).split(' ').filter(w => w && !LAT_STOP.has(w));
+      const plain = words.join(''), key = words.map(phonTok).join('');
+      if (!plain) return true;
+      return normLatin(s.lat).replace(/\s/g, '').includes(plain) || (key.length >= 3 && surahForms(s).lat.some(f => f.includes(key)));
+    },
+    listGroups(){
+      const items = this.juzPool.filter(s => this.surahMatch(s, this.search));
+      if (this.cfg.sort === 'weak'){
+        const rank = s => { const t = this.statOf(s.n); return t ? t.pct : 101; };
+        items.sort((a, b) => rank(a) - rank(b) || a.n - b.n);
+        return items.length ? [{ key:'weak', juz:null, title:'Terlemah dulu', items }] : [];
+      }
+      if (this.cfg.sort === 'short'){
+        items.sort((a, b) => a.ayat - b.ayat || a.n - b.n);
+        return items.length ? [{ key:'short', juz:null, title:'Terpendek dulu', items }] : [];
+      }
+      const out = [];
+      [28, 29, 30].forEach(j => { const it = items.filter(s => s.juz === j); if (it.length) out.push({ key:'j' + j, juz:j, title:'Juz ' + j, items: it }); });
+      return out;
+    },
+    segClass(s){
+      if (!this.isOn(s.n)) return 'bg-slate-200';
+      const t = this.statOf(s.n);
+      return !t ? 'bg-emerald-300' : (t.pct >= 80 ? 'bg-emerald-600' : (t.pct >= 50 ? 'bg-amber-400' : 'bg-rose-500'));
+    },
+
+    /* ------------------- riwayat penguasaan (disimpan di browser) ------------------- */
+    statOf(n){
+      const r = this.stats && this.stats[n]; if (!r) return null;
+      const t = (r.c || 0) + (r.w || 0); if (!t) return null;
+      return { c: r.c || 0, w: r.w || 0, t, pct: Math.round((r.c || 0) / t * 100) };
+    },
+    pctOf(n){ const x = this.statOf(n); return x ? x.pct : 0; },
+    ratioOf(n){ const x = this.statOf(n); return x ? x.c + '/' + x.t : ''; },
+    mColor(n){ const x = this.statOf(n); return !x ? 'bg-slate-300' : (x.pct >= 80 ? 'bg-emerald-500' : (x.pct >= 50 ? 'bg-amber-400' : 'bg-rose-500')); },
+    recordStat(n, ok){
+      const cur = this.stats[n] || { c:0, w:0 };
+      this.stats = { ...this.stats, [n]: { c: cur.c + (ok ? 1 : 0), w: cur.w + (ok ? 0 : 1), t: Date.now() } };
+      try { localStorage.setItem(STATS_KEY, JSON.stringify(this.stats)); } catch(e){}
+    },
+    resetStats(){
+      if (!this.confirmReset){ this.confirmReset = true; setTimeout(() => { this.confirmReset = false; }, 3500); return; }
+      this.confirmReset = false; this.stats = {};
+      try { localStorage.removeItem(STATS_KEY); } catch(e){}
+      this.showToast('Riwayat penguasaan dihapus.');
+    },
+    hasStats(){ return Object.keys(this.stats || {}).length > 0; },
+
+    /* ------------------- rekap sesi & latihan fokus ------------------- */
+    missedSurahs(){
+      const m = {};
+      this.records.forEach(r => { if (r.sn == null) return; const x = m[r.sn] || (m[r.sn] = { n:r.sn, c:0, w:0 }); r.ok ? x.c++ : x.w++; });
+      return Object.values(m).filter(x => x.w > 0).map(x => ({ ...x, s: SURAHS.find(z => z.n === x.n) }))
+        .filter(x => x.s).sort((a, b) => b.w - a.w || a.n - b.n);
+    },
+    startFocus(){
+      const ids = this.missedSurahs().map(x => x.n); if (!ids.length) return;
+      this.focusSet = ids; this.start(true);
+    },
+    isVoice(q){ return !!q && (q.type === 'voice' || q.type === 'surahvoice'); },
+    isSurahQ(q){ return !!q && (q.type === 'surah' || q.type === 'surahvoice'); },
+    isVoiceMode(){ return this.cfg.mode === 'voice' || this.cfg.mode === 'surahvoice'; },
+    isLatinLang(){ return !!this.q && this.q.type === 'surahvoice' && this.cfg.nameLang === 'id-ID'; },
+    showChoices(){ const q = this.q; return !!q && (q.type === 'surah' || q.type === 'mcq' || (q.type === 'surahvoice' && this.choiceMode)); },
+    passPct(){ const t = (this.q && this.q.type === 'surahvoice') ? PASS_TABLE.name : PASS_TABLE.ayah; return t[this.cfg.strict] || t.normal; },
+    thresholdOf(level){ const t = this.cfg.mode === 'surahvoice' ? PASS_TABLE.name : PASS_TABLE.ayah; return t[level]; },
+    silenceMs(){ return (this.q && this.q.type === 'surahvoice') ? NAME_SILENCE_MS : SPEECH_SILENCE_MS; },
+    enableChoice(){
+      if (this.answered || !this.q) return;
+      this.abortMic(); this.missed = false; this.choiceMode = true; this.selected = null;
+    },
+    disableChoice(){ if (!this.answered) this.choiceMode = false; },
+    surahHints(){
+      const q = this.q; if (!q || q.type !== 'surahvoice') return [];
+      const out = ['Terdapat di Juz ' + q.surah.juz + ' · memiliki ' + q.count + ' ayat'];
+      if (this.attempts >= 2){
+        const i = surahInitial(q.surah);
+        out.push('Surah ke-' + q.surah.n, 'Berawalan huruf “' + i.lat + '” (' + i.ar + ')');
+      }
+      return out;
+    },
+    toAr(n){ return String(n).replace(/\d/g, d => '٠١٢٣٤٥٦٧٨٩'[d]); },
+    modeTitle(){ return ((this.modes.find(m => m.id === this.cfg.mode) || {}).title || '') + (this.focusSet ? ' · Fokus' : ''); },
+    progressPct(){ const done = Math.max(0, this.qIndex - 1 + (this.answered ? 1 : 0)); return this.total ? Math.min(100, Math.round(done / this.total * 100)) : 0; },
+    finalPct(){ return this.records.length ? Math.round(this.correctCount / this.records.length * 100) : 0; },
+    showToast(msg){ this.toast = msg; clearTimeout(this._tt); this._tt = setTimeout(() => this.toast = '', 3200); },
+    showFlash(kind, title, sub, ms){
+      clearTimeout(this._flashT);
+      this.flash = { show:true, kind, title, sub: sub || '' };
+      this._flashT = setTimeout(() => { this.flash.show = false; }, ms || 2000);
+    },
+
+    rating(){
+      if (!this.records.length) return { ar:'—', lat:'Belum Ada Jawaban', msg:'Mulai kuis dan jawab setidaknya satu soal untuk melihat penilaian.' };
+      const p = this.finalPct();
+      if (p >= 90) return { ar:'ممتاز', lat:'Mumtaz', msg:'Masya Allah! Hafalan Anda sangat kuat. Pertahankan murojaah rutin.' };
+      if (p >= 80) return { ar:'جيد جدًا', lat:'Jayyid Jiddan', msg:'Sangat baik. Sedikit lagi menuju hafalan yang mutqin.' };
+      if (p >= 65) return { ar:'جيد', lat:'Jayyid', msg:'Baik. Perbanyak mengulang ayat-ayat yang masih terlewat.' };
+      if (p >= 50) return { ar:'مقبول', lat:'Maqbul', msg:'Cukup. Teruslah murojaah dan dengarkan murottal setiap hari.' };
+      return { ar:'اجتهد أكثر', lat:'Ijtahid Akthar', msg:'Jangan menyerah! Ulangi hafalan perlahan, ayat demi ayat.' };
+    },
+
+    /* ------------------- session ------------------- */
+    resetToHome(){
+      this.stopAudio(); this.abortMic(); this.sessionId++; this.screen = 'home';
+      this.step = 1; this.maxStep = 4; this.stepDir = -1;
+      this.$nextTick(() => window.scrollTo({ top: 0 }));
+    },
+
+    /* ------------------- wizard halaman utama ------------------- */
+    get stepAnim(){ return this.stepDir >= 0 ? 'anim-slide-r' : 'anim-slide-l'; },
+    curMode(){ return this.modes.find(m => m.id === this.cfg.mode) || this.modes[0]; },
+    curJuz(){ return this.juzOptions.find(j => j.id === this.cfg.juz) || this.juzOptions[3]; },
+    canNext(){ return this.step !== 3 || this.selCount > 0; },
+    _setStep(n){
+      this.stepDir = n > this.step ? 1 : -1;
+      this.step = n; this.maxStep = Math.max(this.maxStep, n);
+      this.$nextTick(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    },
+    wizNext(){
+      if (this.step >= 4) return;
+      if (!this.canNext()){ this.showToast('Pilih minimal satu surah untuk melanjutkan.'); return; }
+      this._setStep(this.step + 1);
+    },
+    wizPrev(){ if (this.step > 1) this._setStep(this.step - 1); },
+    goStep(n){
+      n = +n; if (!(n >= 1 && n <= 4) || n === this.step) return;
+      if (n > this.step && n > this.maxStep) return;
+      if (n > 3 && this.selCount === 0){ this.showToast('Pilih minimal satu surah terlebih dahulu.'); n = 3; if (n === this.step) return; }
+      this._setStep(n);
+    },
+
+    /* ------------------- tombol Kembali Android ------------------- */
+    onNativeBack(){
+      const arm = (msg) => { this._backArmed = true; this.showToast(msg); clearTimeout(this._backT); this._backT = setTimeout(() => { this._backArmed = false; }, 2200); };
+      if (this.screen === 'quiz'){
+        if (this._backArmed){ this._backArmed = false; this.quit(); } else arm('Tekan Kembali sekali lagi untuk menghentikan kuis');
+        return;
+      }
+      if (this.screen === 'result'){ this.resetToHome(); return; }
+      if (this.step > 1){ this.wizPrev(); return; }
+      if (this._backArmed){ window.NativeBridge && NativeBridge.exit(); return; }
+      arm('Tekan Kembali sekali lagi untuk keluar');
+    },
+
+    /* ------------------- tema terang / gelap ------------------- */
+    initTheme(){
+      let v = null; try { v = localStorage.getItem('tahfidz-theme'); } catch(e){}
+      this.themeStored = (v === 'dark' || v === 'light');
+      const mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
+      this.dark = v === 'dark' || (v !== 'light' && !!(mq && mq.matches));
+      this.applyTheme(false);
+      if (mq && mq.addEventListener) mq.addEventListener('change', e => {      // ikuti sistem selama pengguna belum memilih sendiri
+        if (this.themeStored) return; this.dark = e.matches; this.applyTheme(true);
+      });
+    },
+    toggleDark(){
+      this.dark = !this.dark; this.themeStored = true;
+      try { localStorage.setItem('tahfidz-theme', this.dark ? 'dark' : 'light'); } catch(e){}
+      this.applyTheme(true);
+    },
+    applyTheme(animate){
+      const h = document.documentElement;
+      if (animate){ h.classList.add('theme-anim'); clearTimeout(this._themeT); this._themeT = setTimeout(() => h.classList.remove('theme-anim'), 450); }
+      h.classList.toggle('dark', this.dark);
+      const m = document.querySelector('meta[name="theme-color"]'); if (m) m.setAttribute('content', this.dark ? '#03140E' : '#064E3B');
+    },
+    async start(keepFocus){
+      if (keepFocus !== true) this.focusSet = null;
+      if (!this.pool.length){ this.showToast('Pilih minimal satu surah terlebih dahulu.'); return; }
+      this.stopAudio(); this.abortMic();
+      this.sessionId++;
+      this.total = +this.cfg.count;
+      this.qIndex = 0; this.q = null; this.records = []; this.skips = []; this.correctCount = 0; this.wrongCount = 0;
+      this.used = new Set(); this.usedBy = {}; this.prefetched = null; this.stoppedEarly = false; this.loadError = '';
+      clearAudioCache(); primeTone(); setAudioSession('playback');
+      this.screen = 'quiz';
+      window.scrollTo({ top:0, behavior:'smooth' });
+      await this.showQuestion();
+    },
+    quit(){
+      this.stopAudio(); this.abortMic(); this.sessionId++;
+      this.stoppedEarly = true; this.loading = false;
+      this.finish();
+    },
+    finish(){
+      this.stopAudio(); this.abortMic();
+      this.screen = 'result';
+      window.scrollTo({ top:0, behavior:'smooth' });
+      this.animateScore(this.finalPct());
+    },
+    animateScore(target){
+      this.animPct = 0;
+      const t0 = performance.now(), dur = 1300;
+      const step = now => {
+        const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+        this.animPct = Math.round(target * e);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    },
+
+    async showQuestion(){
+      const sid = this.sessionId;
+      this.loading = true; this.loadError = ''; this.stopAudio(); this.abortMic();
+      try {
+        let q = null;
+        if (this.prefetched){ q = await this.prefetched; this.prefetched = null; }
+        if (!q) q = await this.makeQuestion();
+        if (sid !== this.sessionId) return;
+        // Tunggu audio ayat benar-benar siap (ter-buffer) SEBELUM soal ditampilkan,
+        // supaya murottal langsung terdengar begitu soal aktif tanpa jeda.
+        const entry = this.getAudio(q.ayah);
+        if (this.cfg.autoplay) await waitReady(entry, 3000);
+        if (sid !== this.sessionId) return;
+        this.q = q; this.qIndex++;
+        this.answered = false; this.selected = null; this.lastCorrect = false;
+        this.finalText = ''; this.interim = ''; this.micError = ''; this.voice = null; this.selfMode = false;
+        this.attempts = 0; this.missed = false; this.altTexts = [];
+        this.choiceMode = q.type === 'surahvoice' && !this.speechSupported;   // tanpa mic -> otomatis pilihan ganda
+        this.processing = false;
+        this.loading = false;
+        window.scrollTo({ top:0, behavior:'smooth' });
+        if (this.cfg.autoplay) this.playAyah(q.ayah, 'q');
+        // siapkan soal berikutnya (termasuk audio-nya) selagi pengguna menjawab
+        if (this.qIndex < this.total) this.prefetched = this.makeQuestion().catch(() => null);
+      } catch (e) {
+        if (sid !== this.sessionId) return;
+        this.loading = false;
+        this.loadError = 'Gagal memuat ayat dari Alquran.cloud. Periksa koneksi internet Anda lalu coba lagi.';
+      }
+    },
+    skip(){
+      if (this.answered || !this.q || this.loading) return;
+      this.skips.push({ ref: `QS. ${this.q.surah.lat} : ${this.q.ayah.n}` });
+      this.stopAudio(); this.abortMic();
+      if (this.qIndex >= this.total) { this.finish(); return; }
+      this.showQuestion();
+    },
+    next(){
+      this.stopAudio();
+      if (this.qIndex >= this.total) { this.finish(); return; }
+      this.showQuestion();
+    },
+
+    /* ------------------- question builder ------------------- */
+    async makeQuestion(){
+      const q = await this.buildQuestion();
+      this.preload(q);
+      return q;
+    },
+    // Pilih surah untuk soal berikutnya dari surah ber-✓ yang masih punya ayat belum keluar.
+    // dist 'surah' = tiap surah berpeluang sama; 'ayat' = peluang sebanding sisa ayatnya (surah panjang lebih sering).
+    pickSurah(pool, needNext){
+      const avail = s => Math.max(0, (needNext ? s.ayat - 1 : s.ayat) - (this.usedBy[s.n] || 0));
+      let c = pool.filter(s => avail(s) > 0);
+      if (!c.length){ this.used = new Set(); this.usedBy = {}; c = pool.filter(s => avail(s) > 0); }   // semua soal unik terpakai -> putaran baru
+      if (!c.length) c = pool;
+      if (this.cfg.dist === 'ayat'){
+        const w = c.map(avail); let r = Math.random() * w.reduce((a, b) => a + b, 0);
+        for (let i = 0; i < c.length; i++){ r -= w[i]; if (r <= 0) return c[i]; }
+        return c[c.length - 1];
+      }
+      return rand(c);
+    },
+    async buildQuestion(){
+      const mode = this.cfg.mode, pool = this.pool, needNext = (mode === 'mcq' || mode === 'voice');
+      for (let attempt = 0; attempt < 8; attempt++){
+        const s = this.pickSurah(pool, needNext);
+        const ayahs = await loadSurah(s.n);
+        let idxs = ayahs.map((_, i) => i);
+        if (needNext) idxs = idxs.filter(i => i < ayahs.length - 1);
+        if (!idxs.length) continue;
+        const fresh = idxs.filter(i => !this.used.has(s.n + ':' + i));
+        if (!fresh.length && attempt < 6) continue;
+        const i = rand(fresh.length ? fresh : idxs);
+        const ukey = s.n + ':' + i;
+        if (!this.used.has(ukey)){ this.used.add(ukey); this.usedBy[s.n] = (this.usedBy[s.n] || 0) + 1; }
+        const ayah = ayahs[i];
+
+        if (mode === 'surah' || mode === 'surahvoice'){
+          // pengecoh: utamakan surah ber-✓ lain, lalu lengkapi dari seluruh Juz terpilih
+          const sel = shuffle(pool.filter(x => x.n !== s.n));
+          const rest = shuffle(this.juzPool.filter(x => x.n !== s.n && !sel.includes(x)));
+          let distract = sel.concat(rest).slice(0, 3);
+          if (distract.length < 3){
+            const extra = shuffle(SURAHS.filter(x => x.n !== s.n && !distract.includes(x)));
+            distract = distract.concat(extra.slice(0, 3 - distract.length));
+          }
+          const options = shuffle([{ text:s.lat, ar:s.ar, isCorrect:true }, ...distract.map(d => ({ text:d.lat, ar:d.ar, isCorrect:false }))]);
+          return { type:mode, surah:s, ayah, next:null, options, count: ayahs.length };
+        }
+
+        const next = ayahs[i + 1];
+        if (mode === 'voice') return { type:'voice', surah:s, ayah, next, options:[] };
+
+        // pilihan ganda sambung ayat
+        let cands = ayahs.filter((_, k) => k !== i && k !== i + 1).map(a => a.text);
+        let guard = 0;
+        while (cands.length < 6 && guard++ < 4){
+          const other = await loadSurah(rand(SURAHS).n);
+          cands = cands.concat(other.map(a => a.text));
+        }
+        const nCorrect = norm(next.text), seen = new Set([nCorrect]);
+        cands = cands.filter(t => { const k = norm(t); if (seen.has(k)) return false; seen.add(k); return true; });
+        const len = next.text.length;
+        cands = cands.map(t => ({ t, d: Math.abs(t.length - len) + Math.random() * 25 })).sort((a, b) => a.d - b.d).slice(0, 6).map(x => x.t);
+        const picks = shuffle(cands).slice(0, 3);
+        const options = shuffle([{ text:next.text, isCorrect:true }, ...picks.map(t => ({ text:t, isCorrect:false }))]);
+        return { type:'mcq', surah:s, ayah, next, options };
+      }
+      throw new Error('Tidak dapat membuat soal');
+    },
+
+    /* ------------------- answering (choice) ------------------- */
+    optClass(o, i){
+      if (!this.answered) return 'bg-white border-slate-200 hover:border-emerald-400 hover:shadow-md hover:-translate-y-0.5';
+      if (o.isCorrect) return 'bg-emerald-50 border-emerald-500 ring-2 ring-emerald-200';
+      if (i === this.selected) return 'bg-rose-50 border-rose-400 ring-2 ring-rose-200 animate-shake';
+      return 'bg-white border-slate-200 opacity-60';
+    },
+    choose(i){
+      if (this.answered) return;
+      this.selected = i;
+      this.commit(this.q.options[i].isCorrect, this.q.type === 'surahvoice' ? 'pilihan ganda' : undefined);
+    },
+    commit(ok, note){
+      this.answered = true; this.lastCorrect = ok;
+      ok ? this.correctCount++ : this.wrongCount++;
+      const q = this.q;
+      this.records.push({
+        ok,
+        ref: `QS. ${q.surah.lat} : ${q.ayah.n}` + (!this.isSurahQ(q) ? ' → ' + q.next.n : ''),
+        note: note || '',
+        tries: this.attempts,
+        sn: q.surah.n
+      });
+      this.recordStat(q.surah.n, ok);
+      this.stopAudio(); this.abortMic();
+      this.processing = false; this.missed = false;
+
+      // Notifikasi jelas khusus mode suara: pop-up tengah layar + nada + getar
+      if (this.isVoice(q) && !this.choiceMode){
+        let sub = (this.voice && this.voice.score != null) ? ('Kemiripan ' + this.voice.score + '% · batas lulus ' + this.passPct() + '%') : 'Penilaian mandiri';
+        if (this.attempts > 1) sub += ' · percobaan ke-' + this.attempts;
+        this.showFlash(ok ? 'ok' : 'bad', ok ? 'Benar!' : 'Salah', sub, 2200);
+        playTone(ok);
+        try { navigator.vibrate && navigator.vibrate(ok ? [60] : [90, 60, 90]); } catch(e){}
+      }
+      // gulir ke kartu hasil supaya langsung terlihat
+      setTimeout(() => {
+        const el = document.getElementById('fb-card');
+        if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
+      }, 150);
+    },
+
+    /* ------------------- audio ------------------- */
+    // Setiap ayat dimuat & diseragamkan levelnya di muka (preload), lalu diputar lewat Web Audio.
+    // Volume akhir = volume sistem perangkat; aplikasi tidak memasang volume master.
+    getAudio(a){
+      let e = audioCache.get(a.audio);
+      if (!e){ e = makeEntry(a, this.cfg.normalize !== false); audioCache.set(a.audio, e); }
+      return e;
+    },
+    preload(q){
+      try { this.getAudio(q.ayah); if (q.next) this.getAudio(q.next); } catch(e){}
+    },
+    async playAyah(a, key){
+      if (!a) return;
+      if (this.playingKey === key){ this.stopAudio(); return; }
+      this.abortMic(); this.stopAudio();
+      const token = ++this.playToken;
+      const e = this.getAudio(a);
+      this.playingKey = key;
+      // setelah mikrofon dimatikan, beri sistem jeda singkat mengembalikan jalur audio media (volume normal)
+      const since = performance.now() - (this.micEndedAt || 0);
+      if (since < 600) await sleep(600 - since);
+      if (token !== this.playToken) return;
+      setAudioSession('playback');
+      if (e.mode === 'pending') await Promise.race([e.ready, sleep(10000)]);
+      if (token !== this.playToken) return;
+      if (e.mode === 'web' && e.buf){
+        const c = getCtx();
+        try { if (c.state !== 'running') await Promise.race([c.resume(), sleep(500)]); } catch(_){}
+        if (token !== this.playToken) return;
+        if (c.state === 'running'){ this.playWeb(e, token); return; }
+      }
+      this.playEl(e, token);
+    },
+    playWeb(e, token){
+      const c = getCtx(), lim = getLimiter();
+      try {
+        const src = c.createBufferSource(); src.buffer = e.buf;
+        const g = c.createGain(); g.gain.value = e.gain;     // hanya penyeragam level relatif
+        src.connect(g); g.connect(lim);
+        src.onended = () => {
+          try { src.disconnect(); g.disconnect(); } catch(_){}
+          if (curSrc === src){ curSrc = null; if (this.playToken === token) this.playingKey = null; }
+        };
+        curSrc = src; curEntry = null;
+        src.start(0);
+      } catch (err){ curSrc = null; this.playEl(e, token); }
+    },
+    playEl(e, token){
+      const el = ensureEl(e);
+      curEntry = e; curSrc = null;
+      try { el.currentTime = 0; } catch(_){}
+      const p = el.play();
+      if (p && p.catch) p.catch(err => {
+        if (curEntry !== e || !err || err.name === 'AbortError') return;
+        this.playingKey = null;
+        if (err.name === 'NotAllowedError') this.showToast('Ketuk tombol putar untuk memulai audio.');
+        else this.showToast('Audio tidak dapat diputar.');
+      });
+    },
+    stopAudio(){
+      this.playToken++;
+      if (curSrc){ const x = curSrc; curSrc = null; try { x.stop(); } catch(_){} try { x.disconnect(); } catch(_){} }
+      try { curEntry && curEntry.el && curEntry.el.pause(); } catch(_){}
+      this.playingKey = null;
+    },
+
+    /* ------------------- voice recognition ------------------- */
+    toggleMic(){
+      if (this.processing) return;
+      this.listening ? this.stopMic() : this.startMic();
+    },
+    voiceNotice(msg, title){
+      this.micError = msg;
+      this.showFlash('warn', title || 'Perhatian', msg.length > 70 ? msg.slice(0, 67) + '…' : msg, 3200);
+    },
+    startMic(){
+      if (this.answered || !this.q) return;
+      if (!this.speechSupported){
+        this.voiceNotice('Browser tidak mendukung pengenalan suara. Gunakan Chrome/Edge/Safari atau tombol audio asli.', 'Mic tidak didukung');
+        return;
+      }
+      primeTone();
+      this.stopAudio();
+      this.abortMic();                       // bersihkan sesi lama (event lama diabaikan lewat recId)
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      let r;
+      try { r = new SR(); } catch (e){ this.voiceNotice('Pengenalan suara gagal diinisialisasi. Gunakan evaluasi mandiri.', 'Mic gagal'); return; }
+      const isName = this.q.type === 'surahvoice';
+      this.recLang = isName ? (this.cfg.nameLang || 'ar-SA') : 'ar-SA';
+      r.lang = this.recLang; r.continuous = true; r.interimResults = true; r.maxAlternatives = isName ? 3 : 1;
+      const id = ++this.recId;
+      this.finalText = ''; this.interim = ''; this.micError = ''; this.voice = null; this.altTexts = [];
+      this.recErr = null; this.recDone = false; this.processing = false; this.missed = false;
+
+      r.onstart = () => {
+        if (id !== this.recId) return;
+        this.listening = true;
+        this.armSilence(9000);               // beri waktu mulai membaca
+      };
+      r.onresult = e => {
+        if (id !== this.recId) return;
+        let fin = '', inter = '';
+        const alts = [];
+        for (let i = 0; i < e.results.length; i++){
+          const res = e.results[i];
+          if (res.isFinal) fin += res[0].transcript + ' '; else inter += res[0].transcript + ' ';
+          for (let k = 1; k < res.length; k++) if (res[k] && res[k].transcript) alts.push(res[k].transcript.trim());   // hipotesis alternatif
+        }
+        this.finalText = fin.trim(); this.interim = inter.trim(); this.altTexts = alts;
+        this.armSilence(this.silenceMs());   // selesai otomatis setelah jeda hening
+      };
+      r.onerror = e => { if (id === this.recId) this.recErr = e.error; };
+      r.onend = () => { if (id === this.recId) this.finalizeVoice(id); };
+
+      this.rec = r;
+      setAudioSession('auto');               // biarkan sistem mengatur jalur audio selama merekam
+      try {
+        r.start();
+        this.listening = true;               // umpan balik instan di UI
+      } catch (e){
+        this.rec = null; this.listening = false;
+        this.voiceNotice('Tidak dapat memulai mikrofon. Coba lagi atau gunakan evaluasi mandiri.', 'Mic gagal');
+      }
+    },
+    armSilence(ms){
+      clearTimeout(this.silenceTimer);
+      this.silenceTimer = setTimeout(() => this.stopMic(), ms);
+    },
+    stopMic(){
+      clearTimeout(this.silenceTimer);
+      const r = this.rec, id = this.recId;
+      if (!r || this.recDone) return;
+      this.listening = false; this.processing = true;
+      try { r.stop(); } catch(e){}
+      // Pengaman: sebagian browser tidak memanggil onend setelah stop() -> paksa selesai
+      clearTimeout(this.stopWatch);
+      this.stopWatch = setTimeout(() => this.finalizeVoice(id), 1800);
+    },
+    abortMic(){
+      this.recId++;                          // semua event dari sesi lama diabaikan
+      clearTimeout(this.silenceTimer); clearTimeout(this.stopWatch);
+      const r = this.rec; this.rec = null;
+      this.listening = false; this.processing = false;
+      try { r && r.abort(); } catch(e){}
+      if (r){ this.micEndedAt = performance.now(); setAudioSession('playback'); }
+    },
+    // Satu-satunya jalur penyelesaian rekaman: selalu menghasilkan penilaian ATAU pesan yang jelas.
+    finalizeVoice(id){
+      if (id !== this.recId || this.recDone) return;
+      this.recDone = true;
+      clearTimeout(this.silenceTimer); clearTimeout(this.stopWatch);
+      const r = this.rec; this.rec = null;
+      this.listening = false; this.processing = false;
+      try { r && r.abort(); } catch(e){}
+      this.micEndedAt = performance.now(); setAudioSession('playback');
+      if (this.answered || !this.q) return;
+      const text = (this.finalText + ' ' + this.interim).trim();
+      if (text){ this.evaluateVoice(text); return; }
+      const isName = this.q.type === 'surahvoice';
+      const fb = isName ? 'pakai tombol "Jawab dengan Pilihan Ganda"' : 'pakai tombol "Bandingkan Dengarkan Audio Asli"';
+      const map = {
+        'not-allowed': ['Izin mikrofon ditolak', 'Aktifkan izin mikrofon di browser, atau ' + fb + '.'],
+        'service-not-allowed': ['Layanan suara diblokir', 'Layanan pengenalan suara tidak diizinkan. ' + fb.charAt(0).toUpperCase() + fb.slice(1) + '.'],
+        'audio-capture': ['Mikrofon tidak ditemukan', 'Hubungkan mikrofon atau ' + fb + '.'],
+        'network': ['Koneksi suara bermasalah', 'Layanan suara membutuhkan internet. Coba lagi atau ' + fb + '.'],
+        'language-not-supported': ['Bahasa tidak didukung', 'Bahasa pengenalan (' + this.recLang + ') tidak didukung di perangkat ini. ' + (isName ? 'Ganti bahasa di pengaturan atau ' : 'Coba ') + fb + '.']
+      };
+      const m = map[this.recErr] || ['Suara tidak terdeteksi', 'Suara tidak terdeteksi. Tekan mikrofon, lalu ' + (isName ? 'sebutkan nama surahnya' : 'bacakan ayat berikutnya') + ' dengan jelas.'];
+      this.voiceNotice(m[1], m[0]);
+    },
+    evaluateVoice(text){
+      if (this.answered || !this.q) return;
+      const q = this.q;
+      let score, ok, flags = null, words = [], best = null;
+      try {
+        if (q.type === 'surahvoice'){
+          const texts = [text].concat(this.altTexts || []).filter((t, i, arr) => t && arr.indexOf(t) === i).slice(0, 4);
+          const m = scoreSurahName(texts, q.surah, this.juzPool);
+          score = Math.round(m.target * 100);
+          ok = m.target >= this.passPct() / 100 && m.target + NAME_MARGIN >= m.otherScore;
+          if (!ok && m.other && m.otherScore > m.target && m.otherScore >= 0.5) best = { lat: m.other.lat, ar: m.other.ar, pct: Math.round(m.otherScore * 100) };
+        } else {
+          const cmp = compareArabic(text, q.next.text);
+          score = cmp.score; flags = cmp.flags; words = cmp.words; ok = score >= this.passPct();
+        }
+      } catch (e){ this.voiceNotice('Gagal menilai bacaan. Silakan coba lagi.', 'Penilaian gagal'); return; }
+      this.attempts++;
+      this.voice = { transcript: text, score, flags, words, best };
+      const tag = this.attempts > 1 ? ' · percobaan ke-' + this.attempts : '';
+      if (ok){ this.commit(true, score + '%' + tag); return; }
+
+      // Belum tepat: masih ada kesempatan? (tries: 1 = tanpa coba lagi, 3 = tiga kali, 0 = tak terbatas)
+      const max = +this.cfg.tries;
+      if (max === 0 || this.attempts < max){
+        this.missed = true;
+        this.showFlash('bad', 'Belum tepat', 'Kemiripan ' + score + '% · ' + this.triesInfo() + ' — coba lagi!', 2400);
+        playTone(false);
+        try { navigator.vibrate && navigator.vibrate([90, 60, 90]); } catch(e){}
+        setTimeout(() => { const el = document.getElementById('miss-card'); if (el) el.scrollIntoView({ behavior:'smooth', block:'center' }); }, 200);
+      } else {
+        this.commit(false, score + '%' + (this.attempts > 1 ? ' · ' + this.attempts + ' percobaan' : ''));
+      }
+    },
+    // Teks status percobaan, mis. "Percobaan 1 dari 3 · sisa 2"
+    triesInfo(){
+      const max = +this.cfg.tries;
+      if (max === 0) return 'Percobaan ke-' + this.attempts;
+      const left = Math.max(0, max - this.attempts);
+      return 'Percobaan ' + this.attempts + ' dari ' + max + (left ? ' · sisa ' + left : '');
+    },
+    attemptLabel(){
+      const max = +this.cfg.tries, n = this.attempts + 1;
+      return max === 0 ? 'Percobaan ke-' + n : 'Percobaan ' + n + ' dari ' + max;
+    },
+    // Petunjuk: kata yang sudah benar ditampilkan, kata yang belum ditutup titik-titik
+    hintWords(){
+      if (!this.voice || !this.voice.flags) return [];
+      return this.voice.words.map((w, k) => this.voice.flags[k] ? { t: w, hit: true } : { t: '•'.repeat(Math.max(2, norm(w).length)), hit: false });
+    },
+    hitCount(){ return this.voice && this.voice.flags ? this.voice.flags.filter(f => f === true).length : 0; },
+    retry(){
+      if (this.answered || !this.q) return;
+      this.missed = false; this.micError = '';
+      this.startMic();                       // langsung mulai merekam (masih dalam gestur klik)
+    },
+    giveUp(){
+      if (this.answered || !this.q) return;
+      this.missed = false;
+      const sc = this.voice && this.voice.score != null ? this.voice.score : 0;
+      this.commit(false, sc + '% · menyerah' + (this.attempts > 1 ? ' (' + this.attempts + ' percobaan)' : ''));
+    },
+
+    /* fallback: dengarkan audio asli & nilai mandiri */
+    startSelfMode(){
+      this.abortMic();
+      this.selfMode = true;
+      this.playAyah(this.q.next, 'n');
+    },
+    selfEval(ok){
+      this.voice = { transcript: '', score: null, flags: null, words: [] };
+      this.commit(ok, 'mandiri');
+    }
+  };
+}
+</script>
+</body>
+</html>
