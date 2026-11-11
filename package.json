@@ -1,0 +1,30 @@
+{
+  "name": "tahfidz-28-30",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tahfidz 28-30 — kuis hafalan Al-Qur'an Juz 28, 29 & 30 (Android, Capacitor)",
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.js",
+    "sync": "npm run prepare:web && npx cap sync android",
+    "assets": "npx capacitor-assets generate --android --assetPath assets"
+  },
+  "dependencies": {
+    "@capacitor-community/speech-recognition": "^7.0.1",
+    "@capacitor/android": "^8.6.0",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.6.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.0",
+    "@fontsource/amiri": "^5.3.0",
+    "@fontsource/amiri-quran": "^5.3.0",
+    "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "alpinejs": "^3.14.8",
+    "lucide": "^0.469.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
